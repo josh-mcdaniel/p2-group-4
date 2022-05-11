@@ -11,36 +11,66 @@
 .text-container {
     text-align: center;
     margin-bottom: 100px;
+    
 }
 
-.input-container {
+header {
+    color: white;
+}
+/*.input-container {
     height: 20px;
     margin-bottom: 10px;
     margin-left: auto;
     margin-right:auto;
     background-color: #F4F7F5;
     width: 25%;
-    border-radius: 25px;
+    border-radius: 10px;
     padding: 8px;
     padding-left: 15px;
+    cursor:text;
+}*/
+
+
+
+.input-box {
+    height: 20px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right:auto;
+    background-color: #F4F7F5;
+    width: 25%;
+    border-radius: 10px;
+    border-style: hidden;
+    padding: 8px;
+    padding-left: 15px;
+    cursor:text;
 }
+
+.input-box:focus {
+    border-style:dashed;   
+}
+
+
 
 .login-button {
     background: #00a1e4; 
-    width: 30%;
+    width: 10%;
+    height: 20%;
     margin-left: auto;
     margin-right:auto;
-    border-color: #02040F;
-    border-radius: 25px;
+
+    border-style:hidden;
+    border-radius: 10px;
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: bolder;
     padding: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .login-button:hover {
     cursor: pointer;
+    box-shadow:0 0 10px #00a1e4;
 }
 
 .disclaimer{

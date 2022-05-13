@@ -1,0 +1,108 @@
+.login {
+    width:fit-content;
+    margin:auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(26, 182, 33);
+    
+}
+
+.text-container {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 100px;
+    padding: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(26, 182, 33);
+    border-right-width: 0px;
+    border-left-width: 0px;
+}
+
+/*.input-container {
+    height: 10px;
+    margin-bottom: 15px;
+    border-style: hidden;
+    margin-left: auto;
+    margin-right:auto;
+    background-color: rgb(26, 182, 33);
+    width: 500px;
+    
+    padding: 8px;
+    padding-top: 1px;
+    padding-left: 1px;
+    padding-right: 2px;
+    padding-bottom: 17px;
+}*/
+
+.login-button {
+    background: black;
+    width: 250px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right:auto;
+    border-style: solid;
+    border-color: rgb(26, 182, 33);
+    color: rgb(26, 182, 33);
+    border-width: 3px;
+    border-style:;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.login-button:hover {
+    background-color: rgb(15, 54, 16);
+    border:3px solid rgb(30, 223, 40);
+    box-shadow: 0 0 10px rgb(26, 182, 33);
+    cursor: pointer;
+}
+
+
+
+input{
+    border-style: style;
+    width: stretch;
+    height: 25px;
+    border-color: rgb(26, 182, 33);
+    border-width: 3px;
+    margin-bottom: 15px;
+    color: rgb(26, 182, 33);
+    background: black;
+    border-style: solid;
+}
+
+input:hover {
+
+    background-color: rgb(15, 54, 16);
+    border:3px solid rgb(30, 223, 40);
+    box-shadow: 0 0 10px rgb(26, 182, 33);
+}
+
+input:focus{
+    outline: none !important;
+    border:3px solid rgb(30, 223, 40);
+    box-shadow: 0 0 10px rgb(26, 182, 33);
+}
+
+header {
+    border-style: solid;
+    border-color: rgb(26, 182, 33);
+    border-width: 10px;
+    margin:50px;
+    margin-top: 0px;
+    font-size: 20px;
+    border-top-width: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}

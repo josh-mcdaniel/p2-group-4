@@ -4,7 +4,7 @@ public class Words {
 	
 	private int words_id;
 	private String word;
-	private MixedLetters mixed_letters;
+	private MixedLetters mixed_letters_fk;
 	
 	public Words() {
 		super();
@@ -15,13 +15,13 @@ public class Words {
 		super();
 		this.words_id = words_id;
 		this.word = word;
-		this.mixed_letters = mixed_letters;
+		this.mixed_letters_fk = mixed_letters;
 	}
 
 	public Words(String word, MixedLetters mixed_letters) {
 		super();
 		this.word = word;
-		this.mixed_letters = mixed_letters;
+		this.mixed_letters_fk = mixed_letters;
 	}
 
 	public int getWords_id() {
@@ -41,16 +41,16 @@ public class Words {
 	}
 
 	public MixedLetters getMixed_letters() {
-		return mixed_letters;
+		return mixed_letters_fk;
 	}
 
 	public void setMixed_letters(MixedLetters mixed_letters) {
-		this.mixed_letters = mixed_letters;
+		this.mixed_letters_fk = mixed_letters;
 	}
 
 	@Override
 	public String toString() {
-		return "Words [words_id=" + words_id + ", word=" + word + ", mixed_letters=" + mixed_letters + "]";
+		return "Words [words_id=" + words_id + ", word=" + word + ", mixed_letters=" + mixed_letters_fk + "]";
 	}
 	
 	

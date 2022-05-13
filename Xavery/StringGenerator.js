@@ -16,6 +16,7 @@ function stringGenerator () {
 
        vowelOne = Math.floor(Math.random() * vowelCharArray.length);
        vowelTwo = Math.floor(Math.random() * vowelCharArray.length);
+       // vowels above
        charThree = Math.floor(Math.random() * readyAlphaCharArray.length);
        charFour = Math.floor(Math.random() * readyAlphaCharArray.length);
        charFive = Math.floor(Math.random() * readyAlphaCharArray.length);
@@ -26,10 +27,10 @@ function stringGenerator () {
     //   charSeven = Math.floor(Math.random() * readyAlphaCharArray.length);
     //   charEight = Math.floor(Math.random() * readyAlphaCharArray.length);
 
-       // idea is to code in the need for vowels... 
-       // either by grouping them into a seperate array or using conditionals.
 
- return(`${readyAlphaCharArray[vowelOne]}
+            // two needed vowels and the rest can be any of the 25 of the ABC's) below
+ return(`
+        ${readyAlphaCharArray[vowelOne]}
         ${readyAlphaCharArray[vowelTwo]}
         ${readyAlphaCharArray[charThree]}
         ${readyAlphaCharArray[charFour]}

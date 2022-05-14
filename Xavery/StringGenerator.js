@@ -1,7 +1,4 @@
 
-
-
-
 //turn evrything to lowercase at some point
 
 function stringGenerator () {
@@ -22,21 +19,32 @@ function stringGenerator () {
        charSix = Math.floor(Math.random() * readyAlphaCharArray.length);
        charSeven = Math.floor(Math.random() * readyAlphaCharArray.length);
        charEight = Math.floor(Math.random() * readyAlphaCharArray.length);
-       
-       // charArray = [vowelOne, vowelTwo, charThree, charFour, charFive, charSix, charSeven, charEight];
+      
+       let shuffledArray = 
+       [
+        vowelCharArray[vowelOne], vowelCharArray[vowelTwo], 
+        readyAlphaCharArray[charThree], readyAlphaCharArray[charThree], 
+        readyAlphaCharArray[charThree], readyAlphaCharArray[charThree], 
+        readyAlphaCharArray[charThree], readyAlphaCharArray[charThree],  
+      ];
 
-            // two needed vowels and the rest can be any of the 25 of the ABC's below
- return(`
-        ${vowelCharArray[vowelOne]}
-        ${vowelCharArray[vowelTwo]}
-        ${readyAlphaCharArray[charThree]}
-        ${readyAlphaCharArray[charFour]}
-        ${readyAlphaCharArray[charFive]}
-        ${readyAlphaCharArray[charSix]}
-        ${readyAlphaCharArray[charSeven]}
-        ${readyAlphaCharArray[charEight]}`);
+      shuffledArray = shuffle(shuffledArray);
+
+      
+        console.log(toShuffleArray);
+
+       return(`
+       ${vowelCharArray[vowelOne]}
+       ${vowelCharArray[vowelTwo]}
+       ${readyAlphaCharArray[charThree]}
+       ${readyAlphaCharArray[charFour]}
+       ${readyAlphaCharArray[charFive]}
+       ${readyAlphaCharArray[charSix]}
+       ${readyAlphaCharArray[charSeven]}
+       ${readyAlphaCharArray[charEight]}`);
+
+        // after returning the chars, we want to shuffle them using a shuffle function which can also be turned into a button if we have time
 };
 
-// shuffle chars button on the interface or shuffle in the background each time?
-
 console.log(stringGenerator());
+console.log(shuffledArray);

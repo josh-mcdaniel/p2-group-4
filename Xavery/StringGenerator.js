@@ -1,5 +1,5 @@
 
-//turn evrything to lowercase at some point
+//the casing doesn't matter in this instance as it will be uniformed later. will replace this with more details if need be.
 
 function stringGenerator () {
   let x = 0;
@@ -9,7 +9,7 @@ function stringGenerator () {
   let vowelCharArray = vowelChars.split(" ");
   let readyAlphaCharArray = alphaCharArray;
   
-
+  
        vowelOne = Math.floor(Math.random() * vowelCharArray.length);
        vowelTwo = Math.floor(Math.random() * vowelCharArray.length);
        // vowels above
@@ -19,19 +19,10 @@ function stringGenerator () {
        charSix = Math.floor(Math.random() * readyAlphaCharArray.length);
        charSeven = Math.floor(Math.random() * readyAlphaCharArray.length);
        charEight = Math.floor(Math.random() * readyAlphaCharArray.length);
-      
-       let shuffledArray = 
-       [
-        vowelCharArray[vowelOne], vowelCharArray[vowelTwo], 
-        readyAlphaCharArray[charThree], readyAlphaCharArray[charThree], 
-        readyAlphaCharArray[charThree], readyAlphaCharArray[charThree], 
-        readyAlphaCharArray[charThree], readyAlphaCharArray[charThree],  
-      ];
-
-      shuffledArray = shuffle(shuffledArray);
-
-      
-        console.log(toShuffleArray);
+    
+      // shuffledArray = shuffle(shuffledArray);
+      // we can use shuffledArray as the parameter for a shuffle function 
+      // see: console.log(toShuffleArray);
 
        return(`
        ${vowelCharArray[vowelOne]}
@@ -43,8 +34,9 @@ function stringGenerator () {
        ${readyAlphaCharArray[charSeven]}
        ${readyAlphaCharArray[charEight]}`);
 
-        // after returning the chars, we want to shuffle them using a shuffle function which can also be turned into a button if we have time
+        // after returning the chars, we may want to shuffle them using a shuffle function 
+        // If we have time, this function can also be turned into a button for the user when looking through their letter choices
 };
 
 console.log(stringGenerator());
-console.log(shuffledArray);
+// console.log(shuffledArray);

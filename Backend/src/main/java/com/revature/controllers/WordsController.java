@@ -2,6 +2,7 @@ package com.revature.controllers;
 
 import javax.servlet.http.HttpSession;
 
+import com.google.gson.Gson;
 import com.revature.daos.MixedLettersDAO;
 import com.revature.daos.WordsDAO;
 import com.revature.models.MixedLetters;
@@ -18,13 +19,13 @@ public class WordsController {
 	
 	public static HttpSession ses;
 	
-	public Handler WordsHandler = (ctx) -> {
-		
-		String body = ctx.body();
-		
-		Gson gson = new Gson();
-		
-		List<MixedLetter> mlList =  
-		
-	}
+//	public Handler WordsHandler = (ctx) -> {
+//
+//		String body = ctx.body();
+//
+//		Gson gson = new Gson();
+//
+//		List<MixedLetter> mlList =
+//
+//	}
 }

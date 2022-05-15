@@ -1,9 +1,26 @@
 package com.revature.models;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 public class Leaderboard {
 	
+	@Id 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private int leaderboard_id;
+	
+	@Column
 	private int score;
+	
+	@ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+	@JoinColumn(name = "user_id")
 	private User user;
 	
 	

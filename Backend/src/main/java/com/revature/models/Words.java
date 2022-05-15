@@ -1,9 +1,26 @@
 package com.revature.models;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 public class Words {
 	
+	@Id 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
 	private int words_id;
+	
+	@Column
 	private String word;
+	
+	@ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+	@JoinColumn(name = "mixed_letters_id")
 	private MixedLetters mixed_letters_fk;
 	
 	public Words() {

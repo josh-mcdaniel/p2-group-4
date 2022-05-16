@@ -60,5 +60,6 @@ VALUES
 ('TOPS', 2),
 ('SPOT', 2);
 
-SELECT * FROM words WHERE mixed_letters_fk = 2;
+SELECT * FROM mixed_letters;
+
 --IF '' IS equal TO words WHERE mixed_letters_fk = 2 THEN ADD 1 TO score WHERE user_id = ?

@@ -19,7 +19,7 @@ export const Login: React.FC<any> = () => {
                     <input type="password" name="password"  />
                 </span>
 
-                <button className="login-button" >LOGIN</button>
+                <button className="login-button" onClick={login}>LOGIN</button>
             </div>
 
 

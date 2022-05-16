@@ -9,12 +9,12 @@ import com.revature.utils.HibernateUtil;
 
 public class MixedLettersDAO {
 
-	public List<MixedLetters> getAllMixedLetters{
-		
-		Session ses = HibernateUtil.getSession();
-		
-		List<MixedLetters> mlList = ses.createQuery()
-	}
+//	public List<MixedLetters> getAllMixedLetters{
+//		
+//		Session ses = HibernateUtil.getSession();
+//		
+//		List<MixedLetters> mlList = ses.createQuery();
+//	}
 	
 	public MixedLetters getMixedLettersByID(int id) {
 		

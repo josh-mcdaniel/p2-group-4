@@ -57,7 +57,7 @@ public class AuthController {
 			//inputting the new user into the database
 			as.insertUser(user);
 			//setting the status code
-			ctx.status(200);
+			ctx.status(201);
 			
 		}
 	};

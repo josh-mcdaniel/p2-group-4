@@ -40,6 +40,18 @@ public User userLoginDAO(String username, String password) {
 	return null;
 
 }
+
+	public User getUserbyID(int id) {
+		
+		Session ses = HibernateUtil.getSession();
+		//getting the user from the DB by the ID
+		//first input represents the table and second is the ID
+		User user = ses.get(User.class, id);
+		
+		HibernateUtil.closeSession();
+		
+		return user;
+	}
 	
 	public void insertUser (User user) {
 		

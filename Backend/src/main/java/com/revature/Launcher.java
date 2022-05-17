@@ -1,6 +1,7 @@
 package com.revature;
 
 import com.revature.controllers.AuthController;
+import com.revature.controllers.LeaderboardController;
 
 import io.javalin.Javalin;
 
@@ -10,6 +11,7 @@ public class Launcher {
 		
 		
 		AuthController ac = new AuthController();
+		LeaderboardController lc = new LeaderboardController();
 		
 		Javalin app = Javalin.create(
 					
@@ -24,6 +26,8 @@ public class Launcher {
 			
 			app.post("/Login", ac.userLoginHandler);
 			app.post("/insertUser", ac.insertUserHandler);
+			app.get("/showAllScores", lc.showAllScoresHandler);
+			app.post("/insertScore", lc.insertScoreHandler);
 			
 		}
 

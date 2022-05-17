@@ -24,7 +24,7 @@ public class WordsController {
 		
 		Gson gson = new Gson();
 		
-		List<MixedLetter> mlList =  
+		ArrayList<W> = 
 		
 	}
 }

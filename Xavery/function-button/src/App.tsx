@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Button from "./components/FunctionButtonComponent";
+import Shuffle from './components/Shuffle';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Colorful Custom Button Components</h1>
+      <Button 
+        border="solid"
+        color="blue"
+        height = "200px"
+        onClick={Shuffle}
+        radius = "50%"
+        width = "200px"
+        children = "Shuffle."
+      />
+    </>
   );
 }
 

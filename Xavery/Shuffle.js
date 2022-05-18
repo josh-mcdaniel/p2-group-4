@@ -15,3 +15,5 @@ function shuffle(array) {
   
     return array;
   }
+
+  // grabbed from onlin

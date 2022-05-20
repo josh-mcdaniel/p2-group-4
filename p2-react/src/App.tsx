@@ -9,7 +9,7 @@ function App() {
     <div className="App">
 
           <Login/>
-        </div>
+        </div>/mockito/images/mockito-mini-logo.jpg
 
   );
 }

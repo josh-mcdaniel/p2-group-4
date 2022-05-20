@@ -1,15 +1,15 @@
 .login {
     width:fit-content;
     margin:auto;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
     border-width: 10px;
     border-style: solid;
     border-color: rgb(26, 182, 33);
-    
+
 }
 
 .text-container {
@@ -52,7 +52,7 @@
     border-color: rgb(26, 182, 33);
     color: rgb(26, 182, 33);
     border-width: 3px;
-    border-style:;
+
     font-size: 1.2rem;
     font-weight: 400;
     padding: auto;
@@ -104,5 +104,5 @@ header {
     border-top-width: 0px;
     padding-left: 10px;
     padding-right: 10px;
-    
+
 }

@@ -1,4 +1,9 @@
+import org.junit.Test;
+
 import com.revature.daos.MixedLettersDAO;
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
 
 public class CodalzTests {
 
@@ -8,14 +13,14 @@ public class CodalzTests {
 	@Test
 	public void testSuccessfulLogin() {
 		
-		assertTrue(ud.login("user", "password"));
+		assertTrue(ml.login("user", "password"));
 		
 	}
 	
 	@Test 
 	public void testFailedLogin() {
 		
-		assertFalse(ud.login(" ", " "));
+		assertFalse(ml.login(" ", " "));
 	
 	}
 	
@@ -23,7 +28,7 @@ public class CodalzTests {
 	public void testDataIsReturnedOnValidRoleSearch() {
 		
 		assertNotNull(ed.getEmployeesByRole(" "));
-		
+		 
 	}
 	
 	
@@ -47,6 +52,8 @@ public class CodalzTests {
 		assertEquals(rd.getRoleById(-5000), null);
 		
 	}
+	
+	
 	
 	@Test
 	public void getMixedLettersByID() {

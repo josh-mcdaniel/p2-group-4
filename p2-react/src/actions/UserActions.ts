@@ -13,7 +13,7 @@ interface NewUser {
     email: string
 }
 
-export const loginUser =(loginCreds:UserLogin) => (dispatch:any) => {
+export const loginUser =(loginCreds:UserLogin) => async (dispatch: any) => {
     let loggedInUser: IUser;
 
     try {

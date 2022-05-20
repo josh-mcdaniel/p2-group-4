@@ -14,7 +14,7 @@
 		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
 	<!-- Hibernate Properties -->
 		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-		<property name="hibernate.default_schema">hibernate</property>
+		<property name="hibernate.default_schema">codalz</property>
 	<!-- Hibernate console output -->
 		<property name="hibernate.show_sql">true</property>
 		<property name="hibernate.format_sql">true</property>

@@ -1,27 +1,48 @@
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
+import com.revature.daos.LeaderboardDAO;
 import com.revature.daos.MixedLettersDAO;
-import static org.junit.Assert.assertEquals;
-
-import org.junit.Before;
+import com.revature.daos.UserDAO;
 
 public class CodalzTests {
 
 	MixedLettersDAO ml = new MixedLettersDAO();
+	LeaderboardDAO lb = new LeaderboardDAO();
+	UserDAO ud = new UserDAO();
 
 	
 	@Test
-	public void testSuccessfulLogin() {
+	public void userLoginDAO() {
 		
-		assertTrue(ml.login("user", "password"));
+		assertTrue(ud.login("user", "password"));
 		
 	}
 	
 	@Test 
 	public void testFailedLogin() {
 		
-		assertFalse(ml.login(" ", " "));
+		assertFalse(ud.login(" ", " "));
 	
+	}
+	
+	@Test
+	public void userLoginDAO() {
+		
+		assertEquals(rd.getRoleById(-5000), null);
+		
+	}
+	
+	@Test
+	public void userLoginDAO() {
+		
+		assertEquals(rd.getRoleById(-5000), null);
+		
 	}
 	
 	@Test
@@ -32,16 +53,9 @@ public class CodalzTests {
 	}
 	
 	
-	@Test
-	public void testNullIsReturnedOnInvalidRoleSearch() {
-		
-		assertEquals(rd.getRoleById(-5000), null);
-		
-	}
-	
 	
 	@Test
-	public void testRecordUniqueness() {
+	public void x() {
 		assertNotSame(rd.getRoleById(1), rd.getRoleById(2));
 		assertNotSame(rd.getRoleById(3), rd.getRoleById(4));
 	}
@@ -75,5 +89,32 @@ public class CodalzTests {
 		assertEquals(rd.getRoleById(-5000), null);
 		
 	}
+	
+	
+	@Test
+	public void getUserbyID() {
+		
+		assertEquals(rd.getRoleById(-5000), null);
+		
+	}
+	@Test
+	public void insertUser() {
+		
+		assertEquals(rd.getRoleById(-5000), null);
+		
+	}
+	@Test
+	public void insertScore() {
+		
+		assertEquals(rd.getRoleById(-5000), null);
+		
+	}
+	@Test
+	public void showAllScores() {
+		
+		assertEquals(rd.getRoleById(-5000), null);
+		
+	}
+	
 	
 }

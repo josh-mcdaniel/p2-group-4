@@ -29,6 +29,7 @@ public class AuthController {
             //returning the user to the frontend
             ctx.result(userJSON);
 
+
         }else {
 
             ctx.status(401);

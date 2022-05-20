@@ -32,11 +32,11 @@ public class UserDAO {
 		Session ses = HibernateUtil.getSession();
 
 		//Writing the SQL statement to look for username and password from the database
-		Query q = ses.createQuery("from User u where u.username = ?0 and u.password =?1");
+		Query q = ses.createQuery("from User u where u.username = ?1 and u.password =?2");
 
 		//setting the wildcards to the user inputted username and password
-		q.setParameter(0, username);
-		q.setParameter(1, password);
+		q.setParameter(1, username);
+		q.setParameter(2, password);
 
 
 		//Try and catch block was made to catch the no result in the query error which gives lots of errors
@@ -112,5 +112,17 @@ public class UserDAO {
 		tran.commit();
 		
 		HibernateUtil.closeSession();
+	}
+
+	public User getUserbyID(int id) {
+
+		Session ses = HibernateUtil.getSession();
+		//getting the user from the DB by the ID
+		//first input represents the table and second is the ID
+		User user = ses.get(User.class, id);
+
+		HibernateUtil.closeSession();
+
+		return user;
 	}
 }

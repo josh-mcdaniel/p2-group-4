@@ -10,7 +10,7 @@ import io.javalin.http.Handler;
 
 public class WordsController {
 	
-	WordsDAO wDAO = new WordsDAO();
+	/*WordsDAO wDAO = new WordsDAO();
 	
 	MixedLettersDAO mlDAO = new MixedLettersDAO();
 	
@@ -26,5 +26,5 @@ public class WordsController {
 		
 		ArrayList<W> = 
 		
-	}
+	}*/
 }

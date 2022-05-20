@@ -2,6 +2,7 @@ package com.revature.controllers;
 
 import com.google.gson.Gson;
 import com.revature.models.LoginDTO;
+import com.revature.models.User;
 import com.revature.services.AuthService;
 import io.javalin.http.Handler;
 

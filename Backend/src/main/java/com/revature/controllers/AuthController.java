@@ -13,19 +13,44 @@ public class AuthController {
         Gson gson = new Gson();
         LoginDTO LDTO = gson.fromJson(body, LoginDTO.class);
 
-        if (as.login(LDTO.getUsername(), LDTO.getPassword()) != null) {
-            ctx.req.getSession();
-            ctx.status(202);
-            String userJSON = gson.toJson((as.login(LDTO.getUsername(), LDTO.getPassword())));
+        if(as.userLogin(LDTO) != null) {
 
-            //send back our user JSON object
+            //returns valid session if no session makes ones and returns it
+            ctx.req.getSession();
+            //setting the status code to accepted
+            ctx.status(202);
+
+            System.out.println("User login successful");
+
+            //converting the user  object associated with that username and password
+            //from Java object -> JSON
+            String userJSON = gson.toJson(as.userLogin(LDTO));
+            //returning the user to the frontend
             ctx.result(userJSON);
 
-        } else {
-            ctx.status(401); //401 stands for "unauthorized"
-            System.out.println("login failed");
+        }else {
 
+            ctx.status(401);
+            System.out.println("User login failed");
         }
 
     };
+
+    public Handler insertUserHandler = (ctx) -> {
+
+        if(ctx.req.getSession() != null) {
+
+            String body = ctx.body();
+
+            Gson gson = new Gson();
+            //converting new user information from JSON -> Java object
+            User user = gson.fromJson(body, User.class);
+            //inputting the new user into the database
+            as.insertUser(user);
+            //setting the status code
+            ctx.status(201);
+
+        }
+    };
+
 }

@@ -1,13 +1,8 @@
 package com.revature;
 
-import java.util.List;
+import com.revature.controllers.AuthController;
 
-
-
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.revature.daos.MixedLettersDAO;
-import com.revature.models.MixedLetters;
+import io.javalin.Javalin;
 
 
 
@@ -16,16 +11,20 @@ public class Launcher {
 	
 	public static void main(String[] args) {
 		
-
-		
-		MixedLettersDAO mlDAO = new MixedLettersDAO();
-		
-		List<MixedLetters> mlList = mlDAO.getAllMixedLetters();
-		
-		
-		System.out.println(mlList.toString());
+		AuthController ac = new AuthController();
 		
 
+		Javalin app = Javalin.create(
+				
+				config -> {
+					
+					config.enableCorsForAllOrigins();
+				}
+				
+				
+				).start(5000);
+		
+		app.post("/login", ac.userLoginHandler);
 		
 	}
 

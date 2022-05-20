@@ -46,14 +46,14 @@ export const Login: React.FC<any> = () => {
                 
                 <span className="input-container">   
                     <p>USERNAME</p>    
-                    <input type="text" name="username" id="username" />
+                    <input type="text" name="username" id="username" onChange={handleChange} />
                 </span>
                 <span className="input-container">
                     <p>PASSWORD</p>
-                    <input type="password" name="password"  />
+                    <input type="password" name="password" onChange={handleChange} />
                 </span>
 
-                <button className="login-button" >LOGIN</button>
+                <button className="login-button" onClick={login}>LOGIN</button>
             </div>
 
 

@@ -1,4 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
+import reducer from "../reducers/index";
+
 import { AppState } from "./types";
 
 const initialState:AppState = {
@@ -26,6 +28,6 @@ const initialState:AppState = {
 
 }
 
-/*export const store = configureStore({
+export const store = configureStore({
     reducer
-})*/
+})

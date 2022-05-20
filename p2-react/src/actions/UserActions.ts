@@ -7,13 +7,13 @@ interface UserLogin {
     password: string
 }
 
-interface NewUser {
+/*interface NewUser {
     username: string,
     password: string,
     email: string
-}
+}*/
 
-export const loginUser =(loginCreds:UserLogin) => async (dispatch: any) => {
+export const loginUser = async (loginCreds:UserLogin) => async (dispatch: any) => {
     let loggedInUser: IUser;
 
     try {

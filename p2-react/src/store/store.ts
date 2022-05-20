@@ -29,3 +29,5 @@ const initialState:AppState = {
 /*export const store = configureStore({
     reducer
 })*/
+export class IUser {
+}

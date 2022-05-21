@@ -16,7 +16,7 @@ public class MixedLettersDAO {
 //		List<MixedLetters> mlList = ses.createQuery();
 //	}
 	
-	public MixedLetters getMixedLettersByID(int id) {
+	public static MixedLetters getMixedLettersByID(int id) {
 		
 		Session ses = HibernateUtil.getSession(); 
 		

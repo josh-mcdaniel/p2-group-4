@@ -5,12 +5,13 @@ import java.util.List;
 import org.hibernate.Session;
 
 import com.revature.models.Leaderboard;
+import com.revature.models.User;
 import com.revature.utils.HibernateUtil;
 
 public class LeaderboardDAO {
 	
 	
-	public Leaderboard insertScore(Leaderboard score) {
+	public static Leaderboard insertScore(Leaderboard score) {
 		
 		Session ses = HibernateUtil.getSession();
 		
@@ -32,6 +33,18 @@ public class LeaderboardDAO {
 		HibernateUtil.closeSession();
 		
 		return scoreList;
+	}
+	
+	public static Leaderboard getLeadboardById(int id) {
+		
+		Session ses = HibernateUtil.getSession();
+		//getting the user from the DB by the ID
+		//first input represents the table and second is the ID
+		Leaderboard lr = ses.get(Leaderboard.class, id);
+		
+		HibernateUtil.closeSession();
+		
+		return lr;
 	}
 
 }

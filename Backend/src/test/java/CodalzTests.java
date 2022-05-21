@@ -10,6 +10,7 @@ import org.junit.Test;
 import com.revature.daos.LeaderboardDAO;
 import com.revature.daos.MixedLettersDAO;
 import com.revature.daos.UserDAO;
+import com.revature.models.Leaderboard;
 import com.revature.models.MixedLetters;
 import com.revature.models.User;
 
@@ -87,6 +88,29 @@ public class CodalzTests {
 	        Assert.assertEquals(0, MixedLettersDAO.getMixedLettersByID(id));
 	        			
 	        MixedLetters newMix = MixedLettersDAO.getMixedLettersByID(id);
+
+	        Assert.assertEquals("0", newMix.getMixed_letters_id());
+	        Assert.assertEquals("Blue42", newMix.getJumbled_letters());
+	        return;
+	    }
+	 
+	 @Test
+	    public void insertScore()
+	    {
+	        Leaderboard lt = new Leaderboard();
+	        
+	    	LeaderboardDAO lb = new LeaderboardDAO();
+
+	        lt.setLeaderboard_id(0);
+	        lt.setScore(3000);
+	      
+	        LeaderboardDAO.insertScore(lt);
+	        int id = lt.getLeaderboard_id();
+	        
+	        Assert.assertNotNull(id);
+	        Assert.assertEquals(0, LeaderboardDAO.getLeadboardById(id));
+	        			
+	        Leaderboard newLeaderboard = LeaderboardDAO.getLeadboardById(id);
 
 	        Assert.assertEquals("0", newMix.getMixed_letters_id());
 	        Assert.assertEquals("Blue42", newMix.getJumbled_letters());

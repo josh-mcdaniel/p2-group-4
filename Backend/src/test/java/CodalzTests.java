@@ -4,122 +4,57 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.revature.daos.LeaderboardDAO;
 import com.revature.daos.MixedLettersDAO;
 import com.revature.daos.UserDAO;
+import com.revature.models.User;
 
 public class CodalzTests {
-
+	
+	UserDAO ud = new UserDAO();
 	MixedLettersDAO ml = new MixedLettersDAO();
 	LeaderboardDAO lb = new LeaderboardDAO();
-	UserDAO ud = new UserDAO();
+	
+	User us = new User();
+	
+	// 10 tests are fine
 	
 	@Test
-	public void getUserbyID() {
-		
-		 Member member = memberDao.findById(0l);
+	public void getUserbyID()
+	{
+	    User user = UserDAO.getUserbyID(0);
+	
+	    Assert.assertEquals("JohnOne", user.getUsername());
+	    Assert.assertEquals("john.one@mail.com", user.getPassword());
+	    Assert.assertEquals("2134445555", user.getEmail());
+	    return;		    
+	}
+ 
+   
+ 
+    @Test
+    public void insertUser()
+    {
+        User user = new User();
+        user.setUser_id(0);
+        user.setEmail("jane.one@mail.com");
+        user.setUsername("JaneOne");
+        user.setPassword("2143332222");
 
-	        Assert.assertEquals("John Smith", member.getName());
-	        Assert.assertEquals("john.smith@mailinator.com", member.getEmail());
-	        Assert.assertEquals("2125551212", member.getPhoneNumber());
-	        return;
-	}
-	
-	@Test
-	public void xuserLoginDAO() {
-		
-		assertTrue(ud.User("user", "password"));
-		
-	}
-	
-	@Test 
-	public void testFailedLogin() {
-		
-		assertFalse(ud.login(" ", " "));
-	
-	}
-	
-	@Test
-	public void userLoginDAO() {
-		
-		assertEquals(ud.userLoginDAO(-5000), null);
-		
-	}
-	
-	@Test
-	public void xuserLoginDAO() {
-		
-		assertEquals(rd.getRoleById(-5000), null);
-		
-	}
-	
-	@Test
-	public void testDataIsReturnedOnValidRoleSearch() {
-		
-		assertNotNull(ed.getEmployeesByRole(" "));
-		 
-	}
-	
-	
-	
-	@Test
-	public void x() {
-		assertNotSame(rd.getRoleById(1), rd.getRoleById(2));
-		assertNotSame(rd.getRoleById(3), rd.getRoleById(4));
-	}
-	
-	@Test
-	public void getAllMixedLetters() {
-		
-		assertEquals(ml.getMixedLettersByID(-5000), null);
-		
-	}
-	
-	
-	
-	@Test
-	public void getMixedLettersByID() {
-		
-		assertEquals(rd.getRoleById(-5000), null);
-		
-	}
-	
-	@Test
-	public void insertMixedLetters() {
-		
-		assertEquals(rd.getRoleById(-5000), null);
-		
-	}
-	
-	@Test
-	public void updateMixedLetters() {
-		
-		assertEquals(rd.getRoleById(-5000), null);
-		
-	}
-	
-	
-	
-	@Test
-	public void insertUser() {
-		
-		assertEquals(rd.getRoleById(-5000), null);
-		
-	}
-	@Test
-	public void insertScore() {
-		
-		assertEquals(rd.getRoleById(-5000), null);
-		
-	}
-	@Test
-	public void showAllScores() {
-		
-		assertEquals(rd.getRoleById(-5000), null);
-		
-	}
-	
-	
+        UserDAO.insertUser(user);
+        int id = user.getUser_id();
+        Assert.assertNotNull(id);
+
+        Assert.assertEquals(2, UserDAO.getUserbyID(id));
+        User newUser = UserDAO.getUserbyID(id);
+
+        Assert.assertEquals("JaneOne", newUser.getUsername());
+        Assert.assertEquals("jane.one@mail.com", newUser.getEmail());
+        Assert.assertEquals("2143332222", newUser.getPassword());
+        return;
+    }
+ 
 }

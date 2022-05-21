@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { loginUser } from "../../actions/UserActions"
+import { MainPage } from "../MainPage/mainpage"
+
 import "./Login.css"
 
 export const Login: React.FC<any> = () => {
@@ -28,13 +30,14 @@ export const Login: React.FC<any> = () => {
         await dispatch(
             loginUser({username, password}) as any
         )
+        console.log(appState);
     }
 
     useEffect(() => {
         if (appState.user.id > 0) {
-            navigate("/home")
+            navigate("/home");
         }
-    })
+    }, [appState])
 
     return(
         <div className="login">
@@ -46,7 +49,7 @@ export const Login: React.FC<any> = () => {
                 
                 <span className="input-container">   
                     <p>USERNAME</p>    
-                    <input type="text" name="username" id="username" onChange={handleChange} />
+                    <input type="text" name="username"  onChange={handleChange} />
                 </span>
                 <span className="input-container">
                     <p>PASSWORD</p>

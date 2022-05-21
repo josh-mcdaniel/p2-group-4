@@ -46,7 +46,7 @@ public class AuthController {
 		
 	};
 	
-	public Handler insertUserHandler = (ctx) -> {
+	/*public Handler insertUserHandler = (ctx) -> {
 		
 		if(ctx.req.getSession() != null) {
 			
@@ -61,5 +61,5 @@ public class AuthController {
 			ctx.status(201);
 			
 		}
-	};
+	};*/
 }

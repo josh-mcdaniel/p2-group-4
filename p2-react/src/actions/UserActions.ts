@@ -4,7 +4,6 @@ import { IUser } from "../store/types"
 import { LOGIN_USER } from "./actionTypes";
 
 
-let loggedInUser: IUser;
 
 interface UserLogin {
     username: string,

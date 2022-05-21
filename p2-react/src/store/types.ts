@@ -1,26 +1,26 @@
 
 export interface IUser {
-    id:0,
-    username:"",
-    password:"",
-    email:""
+    id:number,
+    username:string,
+    password:string,
+    email:string
 }
 
 export interface ILeaderboard {
-    id:0,
-    score:0,
-    uId:0
+    id:number,
+    score:number,
+    uId:number
 }
 
 export interface IWords {
-    id:0,
-    word:"",
-    mlId:0
+    id:number,
+    word:string,
+    mlId:number
 }
 
 export interface IMixedLetters {
-    id:0,
-    mixedLetters:""
+    id:number,
+    mixedLetters:string
 }
 
 export type AppState = {

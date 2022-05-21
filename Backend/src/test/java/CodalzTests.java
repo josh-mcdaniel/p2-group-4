@@ -24,7 +24,7 @@ public class CodalzTests {
 	
 	User us = new User();
 	
-	// 10 tests are fine
+	// 10 tests are fine 2 tests per DAO layer
 	// UserDAO
 	@Test
 	public void getUserbyID()
@@ -52,7 +52,7 @@ public class CodalzTests {
         int id = user.getUser_id();
         Assert.assertNotNull(id);
 
-        Assert.assertEquals(2, UserDAO.getUserbyID(id));
+        Assert.assertEquals(0, UserDAO.getUserbyID(id));
         User newUser = UserDAO.getUserbyID(id);
 
         Assert.assertEquals("JaneOne", newUser.getUsername());

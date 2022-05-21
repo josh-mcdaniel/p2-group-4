@@ -5,6 +5,8 @@ import com.revature.daos.UserDAO;
 import com.revature.models.LoginDTO;
 import com.revature.models.User;
 
+import java.util.List;
+
 public class AuthService {
 
     UserDAO uDAO = new UserDAO();
@@ -23,6 +25,11 @@ public class AuthService {
 
         uDAO.insertUser(user);
 
+    }
+
+    public List<User> showAllUsers() {
+        List<User> userList = uDAO.showAllUsers();
+        return userList;
     }
 
 }

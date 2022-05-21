@@ -19,6 +19,14 @@ leaderboard_id SERIAL PRIMARY KEY,
 score INT NULL,
 user_id_fk INt REFERENCES users (user_id) NOT NULL
 );
+SELECT * FROM leaderboard 
+
+INSERT INTO leaderboard (score, user_id_fk)
+VALUES
+(12, 1),
+(7, 2),
+(5, 3),
+(24, 4);
 
 CREATE TABLE mixed_letters (
 mixed_letters_id SERIAL PRIMARY KEY,
@@ -61,5 +69,6 @@ VALUES
 ('SPOT', 2);
 
 SELECT * FROM mixed_letters;
-
+SELECT * FROM words;
+SELECT * FROM users
 --IF '' IS equal TO words WHERE mixed_letters_fk = 2 THEN ADD 1 TO score WHERE user_id = ?

@@ -2,6 +2,7 @@ package com.revature.daos;
 
 import java.util.List;
 
+import com.revature.models.Leaderboard;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -124,5 +125,14 @@ public class UserDAO {
 		HibernateUtil.closeSession();
 
 		return user;
+	}
+
+	public List<User> showAllUsers() {
+		Session ses = HibernateUtil.getSession();
+		List<User> userList = ses.createQuery("from User").list();
+
+		HibernateUtil.closeSession();
+
+		return userList;
 	}
 }

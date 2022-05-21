@@ -5,7 +5,7 @@ let initialState:IUser = {
     id:0,
     username:"",
     password:"",
-    email:""
+    email:"",
 }
 
 type Action = {type:string, payload:any};

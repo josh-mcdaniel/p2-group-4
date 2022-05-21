@@ -6,6 +6,8 @@ import com.revature.models.User;
 import com.revature.services.AuthService;
 import io.javalin.http.Handler;
 
+import java.util.List;
+
 public class AuthController {
     AuthService as = new AuthService();
 
@@ -36,6 +38,16 @@ public class AuthController {
             System.out.println("User login failed");
         }
 
+    };
+
+    public Handler showAllUsersHandler = (ctx) -> {
+        if (ctx.req.getSession(true) != null) {
+            Gson gson = new Gson();
+            List<User> userList = as.showAllUsers();
+            String allUsers = gson.toJson(userList);
+            ctx.result(allUsers);
+            ctx.status(200);
+        }
     };
 
     public Handler insertUserHandler = (ctx) -> {

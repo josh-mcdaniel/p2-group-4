@@ -17,9 +17,9 @@ public class WordsDAO {
 		
 		Session ses = HibernateUtil.getSession(); 
 		
-		Query q = ses.createQuery("FROM Words w WHERE w.mixed_letters_fk.mixed_letters_id = ?0");
+		Query q = ses.createQuery("FROM Words w WHERE w.mixed_letters_fk.mixed_letters_id = ?1");
 		
-		q.setParameter(0, ml.getMixed_letters_id());
+		q.setParameter(1, ml.getMixed_letters_id());
 		
 		List<Words> wordList = q.getResultList();
 		

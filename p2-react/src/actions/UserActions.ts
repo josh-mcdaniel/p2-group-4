@@ -13,9 +13,9 @@ interface UserLogin {
     email: string
 }*/
 
-export const loginUser = async (loginCreds:UserLogin) => async (dispatch: any) => {
-    let loggedInUser: IUser;
 
+export const loginUser = async (loginCreds:UserLogin) =>  async (dispatch: any) => {
+    let loggedInUser: IUser;
     try {
 
         const response = await axios.post('http://localhost:5000/login', loginCreds);
@@ -39,6 +39,7 @@ export const loginUser = async (loginCreds:UserLogin) => async (dispatch: any) =
     } catch (e) {
         console.log("LOGIN FAILED!")
     }
+
 }
 
 /*export const registerUser = (UserCreds:NewUser) => async (dispatch:any) => {

@@ -75,20 +75,21 @@ public class CodalzTests {
 	    {
 	        MixedLetters ml = new MixedLetters();
 	        
+	        MixedLettersDAO md = new MixedLettersDAO();
+
 	        ml.setMixed_letters_id(0);
 	        ml.setJumbled_letters("Blue42");
 	      
-
-	        UserDAO.insertUser(ml);
-	        int id = ml.getUser_id();
+	        MixedLettersDAO.insertMixedLetters(ml);
+	        int id = ml.getMixed_letters_id();
+	        
 	        Assert.assertNotNull(id);
+	        Assert.assertEquals(0, MixedLettersDAO.getMixedLettersByID(id));
+	        			
+	        MixedLetters newMix = MixedLettersDAO.getMixedLettersByID(id);
 
-	        Assert.assertEquals(2, UserDAO.getUserbyID(id));
-	        MixedLetters newUser = UserDAO.getUserbyID(id);
-
-	        Assert.assertEquals("JaneOne", newUser.getUsername());
-	        Assert.assertEquals("jane.one@mail.com", newUser.getEmail());
-	        Assert.assertEquals("2143332222", newUser.getPassword());
+	        Assert.assertEquals("0", newMix.getMixed_letters_id());
+	        Assert.assertEquals("Blue42", newMix.getJumbled_letters());
 	        return;
 	    }
  

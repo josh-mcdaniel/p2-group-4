@@ -15,12 +15,22 @@ public class CodalzTests {
 	MixedLettersDAO ml = new MixedLettersDAO();
 	LeaderboardDAO lb = new LeaderboardDAO();
 	UserDAO ud = new UserDAO();
-
 	
 	@Test
-	public void userLoginDAO() {
+	public void getUserbyID() {
 		
-		assertTrue(ud.login("user", "password"));
+		 Member member = memberDao.findById(0l);
+
+	        Assert.assertEquals("John Smith", member.getName());
+	        Assert.assertEquals("john.smith@mailinator.com", member.getEmail());
+	        Assert.assertEquals("2125551212", member.getPhoneNumber());
+	        return;
+	}
+	
+	@Test
+	public void xuserLoginDAO() {
+		
+		assertTrue(ud.User("user", "password"));
 		
 	}
 	
@@ -34,12 +44,12 @@ public class CodalzTests {
 	@Test
 	public void userLoginDAO() {
 		
-		assertEquals(rd.getRoleById(-5000), null);
+		assertEquals(ud.userLoginDAO(-5000), null);
 		
 	}
 	
 	@Test
-	public void userLoginDAO() {
+	public void xuserLoginDAO() {
 		
 		assertEquals(rd.getRoleById(-5000), null);
 		
@@ -63,7 +73,7 @@ public class CodalzTests {
 	@Test
 	public void getAllMixedLetters() {
 		
-		assertEquals(rd.getRoleById(-5000), null);
+		assertEquals(ml.getMixedLettersByID(-5000), null);
 		
 	}
 	
@@ -91,12 +101,7 @@ public class CodalzTests {
 	}
 	
 	
-	@Test
-	public void getUserbyID() {
-		
-		assertEquals(rd.getRoleById(-5000), null);
-		
-	}
+	
 	@Test
 	public void insertUser() {
 		

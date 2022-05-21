@@ -4,6 +4,8 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -60,7 +62,7 @@ public class CodalzTests {
     }
     
     // MixedLettersDAO
-    
+    @Test
 	public void getMixedLettersByID()
 	{
 		MixedLetters ml = MixedLettersDAO.getMixedLettersByID(0);
@@ -94,6 +96,7 @@ public class CodalzTests {
 	        return;
 	    }
 	 
+	 // LeaderboardDAO
 	 @Test
 	    public void insertScore()
 	    {
@@ -112,9 +115,26 @@ public class CodalzTests {
 	        			
 	        Leaderboard newLeaderboard = LeaderboardDAO.getLeadboardById(id);
 
-	        Assert.assertEquals("0", newMix.getMixed_letters_id());
-	        Assert.assertEquals("Blue42", newMix.getJumbled_letters());
+	        Assert.assertEquals("0", newLeaderboard.getLeaderboard_id());
+	        Assert.assertEquals("Blue42", newLeaderboard.getLeaderboard_id());
 	        return;
 	    }
+	 
+	 	@Test
+		public void showAllScores() {
+	 		List<Leaderboard> lt = LeaderboardDAO.showAllScores();
+	        
+	 		Leaderboard lr = new Leaderboard();
+	 		LeaderboardDAO lb = new LeaderboardDAO();
+
+	        lr.setLeaderboard_id(0);
+	        lr.setScore(3000);
+	      
+	        LeaderboardDAO.insertScore(lr);
+	        LeaderboardDAO.showAllScores();
+	 		
+	 		Assert.assertNotNull(lt);
+		    return;		    
+		}
  
 }

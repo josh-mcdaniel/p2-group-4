@@ -1,7 +1,43 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { loginUser } from "../../actions/UserActions"
+
 import "./Login.css"
 
 export const Login: React.FC<any> = () => {
+
+    const appState = useSelector<any, any>((state) => state);
+
+    const dispatch = useDispatch();
+
+    let [username, setUsername] = useState('');
+    let [password, setPassword] = useState('');
+
+    const navigate = useNavigate();
+
+    const handleChange = (e:any) => {
+        if(e.target.name === "username") {
+            setUsername(e.target.value)
+            console.log(username)
+        } else {
+            setPassword(e.target.value)
+        }
+    }
+
+    const login = async () => {
+        await dispatch(
+            loginUser({username, password}) as any
+        )
+        console.log(appState);
+    }
+
+    useEffect(() => {
+        if (appState.user.id > 0) {
+            navigate("/home");
+        }
+    }, [appState, navigate])
+
     return(
         <div className="login">
             <header>
@@ -12,14 +48,14 @@ export const Login: React.FC<any> = () => {
                 
                 <span className="input-container">   
                     <p>USERNAME</p>    
-                    <input type="text" name="username" id="username" />
+                    <input type="text" name="username"  onChange={handleChange} />
                 </span>
                 <span className="input-container">
                     <p>PASSWORD</p>
-                    <input type="password" name="password"  />
+                    <input type="password" name="password" onChange={handleChange} />
                 </span>
 
-                <button className="login-button" >LOGIN</button>
+                <button className="login-button" onClick={login}>LOGIN</button>
             </div>
 
 

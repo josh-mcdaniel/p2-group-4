@@ -11,7 +11,11 @@
   </properties>
   
   <dependencies>
-  
+        <dependency>
+        <groupId>com.github.spullara.mustache.java</groupId>
+        <artifactId>compiler</artifactId>
+        <version>0.8.18</version>
+</dependency>
    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
     <dependency>
         <groupId>org.postgresql</groupId>

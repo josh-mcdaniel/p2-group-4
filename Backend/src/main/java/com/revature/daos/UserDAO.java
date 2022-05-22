@@ -41,7 +41,7 @@ public User userLoginDAO(String username, String password) {
 
 }
 
-	public User getUserbyID(int id) {
+	public static User getUserbyID(int id) {
 		
 		Session ses = HibernateUtil.getSession();
 		//getting the user from the DB by the ID
@@ -53,7 +53,7 @@ public User userLoginDAO(String username, String password) {
 		return user;
 	}
 	
-	public void insertUser (User user) {
+	public static void insertUser (User user) {
 		
 		Session ses = HibernateUtil.getSession();
 		

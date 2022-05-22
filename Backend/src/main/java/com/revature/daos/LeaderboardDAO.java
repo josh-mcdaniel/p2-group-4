@@ -24,7 +24,7 @@ public class LeaderboardDAO {
 		
 	}
 	
-	public List<Leaderboard> showAllScores(){
+	public static List<Leaderboard> showAllScores(){
 		
 		Session ses = HibernateUtil.getSession();
 		//getting the list from the DB in descending order

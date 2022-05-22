@@ -27,7 +27,7 @@ public class MixedLettersDAO {
 		return ml;
 	}
 	
-	public void insertMixedLetters(MixedLetters ml) {
+	public static void insertMixedLetters(MixedLetters ml) {
 		
 	}
 	

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { getWord } from "./actions/wordAction"
+import { getWord } from "../actions/wordAction"
 
-import { CountDisplay } from "./CountDisplay"
+
 import { WordDisplay } from "./WordDisplay"
 
 
@@ -10,7 +10,7 @@ import { WordDisplay } from "./WordDisplay"
 
 
 
-export const Home: React.FC<any> = () => {
+export const Game: React.FC<any> = () => {
 
     //we need useSelector to access the store
     //we set it so that it can take <any state, and access any store>

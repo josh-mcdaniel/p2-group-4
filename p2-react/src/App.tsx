@@ -3,8 +3,9 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Login } from './components/Login/Login';
-import { MainPage } from './components/MainPage/mainpage'
+import { MainPage } from './components/MainPage/mainpage';
 import { Game } from './components/Game/Game';
+import { UserScore } from './components/UserScore/UserScore';
 
 function App() {
     return (
@@ -20,7 +21,10 @@ function App() {
                     <Route path='/game' element={<Game/>}/>
                 </Routes>
                 <Routes>
-                    <Route path='/myScore' element={<Game/>}/>
+                    <Route path='/myScores' element={<UserScore/>}/>
+                </Routes>
+                <Routes>
+                    <Route path='/leaderboard' element={<UserScore/>}/>
                 </Routes>
             </Router>
         </div>

@@ -33,9 +33,10 @@ public class Launcher {
 	// takes in a url endpoint, and a place in the server to send the request to
         app.post("/users", ac.insertUserHandler);
         app.post("/login", ac.loginHandler);
-		app.get("/showAllScores", lc.showAllScoresHandler);
+		app.get("/showAllScores", lc.showAllScoresHandler); //top scores
 		app.post("/insertScore", lc.insertScoreHandler);
 		app.get("/showUsers", ac.showAllUsersHandler);
+
 }
 
 }

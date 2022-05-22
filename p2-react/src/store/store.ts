@@ -2,6 +2,7 @@ import {configureStore} from "@reduxjs/toolkit";
 import reducer from "../reducers/index";
 import { AppState } from "./types";
 
+
 const initialState:AppState = {
     user: {
         id:0,
@@ -30,5 +31,3 @@ const initialState:AppState = {
 export const store = configureStore({
     reducer
 })
-export class IUser {
-}

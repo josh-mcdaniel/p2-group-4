@@ -6,6 +6,9 @@ import "./mainpage.css"
 
 export const MainPage: React.FC<any> = () => {
 
+    useNavigate
+
+
     return(
         <div>
 
@@ -27,8 +30,8 @@ export const MainPage: React.FC<any> = () => {
                 .
             </div>
 
-            <div><button id="logout-button" name="logout">LOG OUT</button></div>
-
+            <div><button id="register-button" name="register" onClick={register}>SIGN UP</button></div>
+            <div><button id="logout-button" name="logout" onClick={logout}>LOG OUT</button></div>
 
         </div>
 

@@ -14,7 +14,7 @@ interface UserLogin {
 }*/
 
 
-export const loginUser = async (loginCreds:UserLogin) =>  async (dispatch: any) => {
+export const loginUser = (loginCreds:UserLogin) =>  async (dispatch: any) => {
     let loggedInUser: IUser;
     try {
 
@@ -25,7 +25,7 @@ export const loginUser = async (loginCreds:UserLogin) =>  async (dispatch: any) 
             console.log(response);
 
             loggedInUser = {
-                id: response.data.id,
+                id: response.data.user_id,
                 username: response.data.username,
                 password: response.data.password,
                 email: response.data.email

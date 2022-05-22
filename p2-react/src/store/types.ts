@@ -3,6 +3,7 @@ export interface IUser {
     username:"",
     password:"",
     email:""
+    score: 0
 }
 
 export interface ILeaderboard {

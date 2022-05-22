@@ -19,7 +19,7 @@ export const MainPage: React.FC<any> = () => {
             navigate("/myScores")
         } else if (e.target.name === "leaderboard") {
             navigate("/leaderboard")
-        } else {
+        } else if (e.target.name === "logout") {
             navigate("/login")
         }
     }

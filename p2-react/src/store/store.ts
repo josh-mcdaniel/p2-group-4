@@ -8,7 +8,8 @@ const initialState:AppState = {
         id:0,
         username:"",
         password:"",
-        email:""
+        email:"",
+        score:0
     },
     leaderboard: {
         id:0,

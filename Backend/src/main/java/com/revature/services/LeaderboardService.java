@@ -30,9 +30,9 @@ public class LeaderboardService {
 
     }
 
-    public List<Leaderboard> showAllScores(){
+    public List<User> showAllScores(){
         //making a list object and calling the dao method to show all scores
-        List<Leaderboard> scoreList = lDAO.showAllScores();
+        List<User> scoreList = lDAO.showAllScores();
         //returning the list
         return scoreList;
     }

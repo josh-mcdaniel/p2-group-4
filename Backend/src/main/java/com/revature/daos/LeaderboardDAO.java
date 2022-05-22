@@ -1,6 +1,7 @@
 package com.revature.daos;
 
 import com.revature.models.Leaderboard;
+import com.revature.models.User;
 import com.revature.utils.HibernateUtil;
 import org.hibernate.Session;
 
@@ -21,11 +22,11 @@ public class LeaderboardDAO {
 
     }
 
-    public List<Leaderboard> showAllScores(){
+    public List<User> showAllScores(){
 
         Session ses = HibernateUtil.getSession();
         //getting the list from the DB in descending order
-        List<Leaderboard> scoreList = ses.createQuery("from Leaderboard l order by l.score desc").list();
+        List<User> scoreList = ses.createQuery("from User u order by u.score desc").list();
 
         HibernateUtil.closeSession();
 

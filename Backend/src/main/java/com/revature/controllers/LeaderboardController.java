@@ -5,6 +5,7 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.revature.models.Leaderboard;
 import com.revature.models.ScoreDTO;
+import com.revature.models.User;
 import com.revature.services.LeaderboardService;
 
 import io.javalin.http.Handler;
@@ -46,7 +47,7 @@ public class LeaderboardController {
 
             Gson gson = new Gson();
 
-            List<Leaderboard> scoreList = ls.showAllScores();
+            List<User> scoreList = ls.showAllScores();
             //turning all the score list into JSON
             String allScores = gson.toJson(scoreList);
             //returning the scores to the front end

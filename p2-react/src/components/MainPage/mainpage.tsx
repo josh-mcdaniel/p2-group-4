@@ -14,20 +14,17 @@ export const MainPage: React.FC<any> = () => {
         
         <div>
             <button id="start-button" name="start-button">START</button></div>
-        <div>
-            .
 
-        </div>
         
         <div>
             <button id="score-button" name="score-button">SEE ALL SCORES</button>
         </div>
         
-        <div>
-            .
-        </div>
+
         
-        <div><button id="logout-button" name="logout">LOG OUT</button></div>
+        <div>
+            <button id="logout-button" name="logout">LOG OUT</button> 
+        </div>
     
     
     </div>

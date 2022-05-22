@@ -1,5 +1,5 @@
 import axios from "axios";
-import { bindActionCreators } from "redux";
+
 import { IUser } from "../store/types"
 import { LOGIN_USER } from "./actionTypes";
 
@@ -29,7 +29,7 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
             console.log(response);
 
             loggedInUser = {
-                id: response.data.id,
+                id: response.data.user_id,
                 username: response.data.username,
                 password: response.data.password,
                 email: response.data.email

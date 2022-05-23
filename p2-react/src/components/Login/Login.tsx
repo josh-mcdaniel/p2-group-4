@@ -8,7 +8,7 @@ import "./Login.css"
 
 export const Login: React.FC<any> = () => {
 
-    const user = useSelector<any, any>((state) => state.user);
+    const appState = useSelector<any, any>((state) => state);
 
     const dispatch = useDispatch();
 
@@ -30,14 +30,14 @@ export const Login: React.FC<any> = () => {
         await dispatch(
             loginUser({username, password}) as any
         )
-        console.log(user);
+        
     }
 
     useEffect(() => {
-        if (user.id > 0) {
+        if (appState.user.id > 0) {
             navigate("/home");
         }
-    }, [user.id])
+    }, [appState.user.id])
 
     return(
         <div className="login">

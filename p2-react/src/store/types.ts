@@ -4,6 +4,8 @@ export interface IUser {
     username:string,
     password:string,
     email:string
+    score:number,
+    gamesPlayed:number
 }
 
 export interface ILeaderboard {

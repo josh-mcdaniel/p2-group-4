@@ -46,9 +46,7 @@ public class AuthController {
 		
 	};
 	
-	/*public Handler insertUserHandler = (ctx) -> {
-		
-		if(ctx.req.getSession() != null) {
+	public Handler insertUserHandler = (ctx) -> {
 			
 			String body = ctx.body();
 			
@@ -56,10 +54,19 @@ public class AuthController {
 			//converting new user information from JSON -> Java object
 			User user = gson.fromJson(body, User.class);
 			//inputting the new user into the database
+			if (user != null) {
+				
 			as.insertUser(user);
 			//setting the status code
 			ctx.status(201);
 			
+			System.out.println("New User added successfully!!");
+			
+		} else {
+			
+			ctx.status(400);
+			
+			System.out.println("Bad Request: New user recieved as null");
 		}
-	};*/
+	};
 }

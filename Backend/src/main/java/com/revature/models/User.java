@@ -23,10 +23,48 @@ public class User {
 	private String password;
 	private String email;
 	
+	@Column
+	private int score;
 	
+	@Column
+	private int games_played;
+	
+	
+	public User(int user_id, String username, String password, String email, int score) {
+		super();
+		this.user_id = user_id;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.score = score;
+	}
+
+
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public User(int user_id, String username, String password, String email, int score, int games_played) {
+		super();
+		this.user_id = user_id;
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.score = score;
+		this.games_played = games_played;
+	}
+
+	
+
+
+	public User(String username, String password, String email, int score, int games_played) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.score = score;
+		this.games_played = games_played;
 	}
 
 
@@ -87,11 +125,35 @@ public class User {
 	}
 
 
+
+
+	public int getScore() {
+		return score;
+	}
+
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+	
+	public int getGames_played() {
+		return games_played;
+	}
+
+
+	public void setGames_played(int games_played) {
+		this.games_played = games_played;
+	}
+
+
 	@Override
 	public String toString() {
 		return "User [user_id=" + user_id + ", username=" + username + ", password=" + password + ", email=" + email
-				+ "]";
+				+ ", score=" + score + ", games_played=" + games_played + "]";
 	}
+
+
+	
 	
 	
 	

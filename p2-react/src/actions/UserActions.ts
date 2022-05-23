@@ -32,7 +32,9 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
                 id: response.data.user_id,
                 username: response.data.username,
                 password: response.data.password,
-                email: response.data.email
+                email: response.data.email,
+                score: response.data.score,
+                gamesPlayed: response.data.games_played
             }
 
             return dispatch({

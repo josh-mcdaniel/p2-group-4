@@ -1,11 +1,14 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from 'react-router-dom';
 import {RegisterUser, registerUser } from '../../actions/UserActions';
+
+
 export const Register: React.FC<any> = () => {
 
     const [user, setUser] = useState({});
     const dispatch = useDispatch();
-
+    const navigate = useNavigate();
     const handleChange = (e: any) => {
         const updatedUser = {
             ...user,
@@ -20,6 +23,7 @@ export const Register: React.FC<any> = () => {
             registerUser(user as RegisterUser) as any
         )
         console.log('Response: ', response);
+        navigate('/');
     }
 
     return (

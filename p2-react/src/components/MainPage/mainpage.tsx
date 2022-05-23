@@ -29,7 +29,7 @@ export const MainPage: React.FC<any> = () => {
         }
     }
     return(
-    <div>
+    <div className="black-buttons">
            
     
         <h1>Codalz</h1>

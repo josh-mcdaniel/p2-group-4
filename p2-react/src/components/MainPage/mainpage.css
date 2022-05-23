@@ -1,7 +1,13 @@
 h1 {
-    color: lime;
-    font-size: 108px;
-    font-family: Digital Dream;
+    font-size: 120px;
+    text-transform: uppercase;
+    font-family: 'Odibee Sans', cursive;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
     text-align: center;
 }
 
@@ -12,66 +18,89 @@ body {
 }
 
 #start-button {
-    background:aqua;
-    margin:0 auto;
-    display:block;
-    font-size:80px;
+    background: rgb(19, 17, 1);
+    margin: 0 auto;
+    display: block;
+    font-size: 80px;
+    color: palegoldenrod;
     font-family: Digital Dream;
-    border: 5px outset lime;
+    border-color: 3px PaleGoldenRod;
     border-radius: 12px;
     text-align: center;
-    
-    
+    font-family: 'Odibee Sans', cursive;
+    padding: 10px;
 }
-    
+
 #score-button {
-    background:aqua;
-    margin:0 auto;
-    display:block;
-    font-size:80px;
+    background: rgb(19, 17, 1);
+    margin: 0 auto;
+    display: block;
+    font-size: 80px;
+    color: palegoldenrod;
     font-family: Digital Dream;
-    border: 5px outset lime;
+    border-color: 3px PaleGoldenRod;
     border-radius: 12px;
     text-align: center;
+    font-family: 'Odibee Sans', cursive;
+    padding: 10px;
 }
 
 #logout-button {
-    background:aqua;
-    margin:0 auto;
-    display:block;
-    font-size:80px;
+    background: rgb(19, 17, 1);
+    margin: 0 auto;
+    display: block;
+    font-size: 80px;
+    color: palegoldenrod;
     font-family: Digital Dream;
-    border: 5px outset lime;
+    border-color: 3px PaleGoldenRod;
     border-radius: 12px;
     text-align: center;
+    font-family: 'Odibee Sans', cursive;
+    padding: 10px;
+}
 
+#leaderboard {
+    background: rgb(19, 17, 1);
+    margin: 0 auto;
+    display: block;
+    font-size: 80px;
+    color: palegoldenrod;
+    font-family: Digital Dream;
+    border-color: 3px PaleGoldenRod;
+    border-radius: 12px;
+    text-align: center;
+    font-family: 'Odibee Sans', cursive;
+    padding: 10px;
+}
 
+.black-buttons {
+    align-items: right;
+    background-color: rgb(202, 154, 112);
+    margin: 300px;
 }
 
 #logout_page {
     font-size: 72px;
     font-family: Digital Dream;
-    text-align: center; 
+    text-align: center;
     padding: 375px 0;
-    
 }
 
 #score_box {
-    
-        
-        background-color: black;
-        color: aqua;;
-        font-size: 54px;
-        font-family: Digital Dream;
-        border: 3px double lime;
-        text-align: center;
-        padding-top: 10px;
-        position: absolute;
-        width: 450px;
-        height: 600px;
-        top:0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
+    background-color: black;
+    color: aqua;
+    ;
+    font-size: 54px;
+    font-family: Digital Dream;
+    border: 3px double lime;
+    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    width: 450px;
+    height: 600px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}

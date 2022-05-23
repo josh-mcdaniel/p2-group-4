@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import { IUser } from "../store/types"
-import { LOGIN_USER, UPDATE_USER } from "./actionTypes";
+import { LOGIN_USER, LOGIN_USER_FAILURE, LOGIN_USER_SUCCESS, REGISTER_USER_FAILURE, REGISTER_USER_SUCCESS, UPDATE_USER } from "./actionTypes";
 
 
 
@@ -14,6 +14,14 @@ interface NewUser {
     username: string,
     password: string,
     email: string
+}
+
+export interface RegisterUser {
+    username: string,
+    password: string,
+    email: string,
+    score?: number,
+    gamesPlayed?: number
 }
 
 export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
@@ -38,35 +46,43 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
             }
 
             return dispatch({
-                type: LOGIN_USER,
+                type: LOGIN_USER_SUCCESS,
                 payload: loggedInUser
             })
         }
     } catch (e) {
         console.log("LOGIN FAILED!")
+        return dispatch({
+            type: LOGIN_USER_FAILURE,
+            payload: e
+        })
     }
 }
 
-/*export const registerUser = (UserCreds:NewUser) => async (dispatch:any) => {
-
+export const registerUser = (userCreds: RegisterUser) => async (dispatch:any) => {
     try {
-        
-        const response = await axios.post('projdb.cbwacvu5rhbu.us-east-1.rds.amazonaws.com:5432/register', UserCreds);
-
+        let newUser: RegisterUser = {} as RegisterUser;
+        const response = await axios.post('http://localhost:5000/register', userCreds);
         if (response.status === 201) {
-
             console.log(response);
-
-            UserCreds = {
-                
+            newUser = {
+                ...response.data
             }
         }
-        
+        return dispatch({
+            type: REGISTER_USER_SUCCESS,
+            payload: newUser,
+        })
+    } catch (error) {
+        console.log("REGISTER FAILED!")
+        return dispatch({
+            type: REGISTER_USER_FAILURE,
+            payload: error,
+        })
     }
-}*/
-interface score {
-    score: number
+
 }
+
 export const updateUser = (user:IUser, score:number) => async (dispatch:any) => {
 
     let newUser: IUser = {
@@ -74,7 +90,7 @@ export const updateUser = (user:IUser, score:number) => async (dispatch:any) => 
         username: user.username,
         password: user.password,
         email: user.email,
-        score: score,
+        score: user.score + score,
         gamesPlayed: user.gamesPlayed
 
     }

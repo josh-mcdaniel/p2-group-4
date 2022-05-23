@@ -13,11 +13,7 @@ const initialState:AppState = {
         gamesPlayed:0
 
     },
-    leaderboard: {
-        id:0,
-        score:0,
-        uId: 0
-    },
+    leaderboard: [],
     words: {
         id:0,
         word:"",

@@ -28,9 +28,11 @@ export const Game: React.FC<any> = (props) => {
     
     const handleChange = (e:any) => {
          if(e.target.name === "answerInput"){
-             console.log(word)
-            console.log(appState)
+
             setWord(e.target.value)
+            console.log(word)
+            setScore(e.target.value.length)
+            console.log(score)
          }
      }
 
@@ -51,7 +53,7 @@ export const Game: React.FC<any> = (props) => {
 
     useEffect(()=>{
         if(appState.word.isValid === true){
-            setScore(appState.word.word.length)
+            
             showScore();
         }
 
@@ -64,7 +66,7 @@ export const Game: React.FC<any> = (props) => {
 
 
     return(
-        <div >
+        <div className="border-around-game" >
             <div className="container">
                 <h3>TIME REMAINING</h3>
                 <CountDownTimer minutes={1} seconds={60}  />

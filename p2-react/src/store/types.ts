@@ -37,7 +37,7 @@ export interface Iword {
 
 export type AppState = {
     user:IUser,
-    leaderboard:ILeaderboard,
+    leaderboard:ILeaderboard[],
     words:IWords,
     mixedLetters:IMixedLetters,
     word:Iword

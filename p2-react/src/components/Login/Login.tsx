@@ -24,6 +24,9 @@ export const Login: React.FC<any> = () => {
         } else {
             setPassword(e.target.value)
         }
+        if (e.target.name === "signup-button") {
+            navigate("/register")
+        }
     }
 
     const login = async () => {
@@ -45,22 +48,25 @@ export const Login: React.FC<any> = () => {
                 <h1>WELCOME TO CODALZ!</h1>
             </header>
             <div className="text-container">
-                <h3>SIGN IN BELOW TO START DECODING</h3>
+                <h3 className="sign-in">SIGN IN BELOW TO START DECODING</h3>
                 
                 <span className="input-container">   
                     <p>USERNAME</p>    
-                    <input type="text" name="username"  onChange={handleChange} />
+                    <input className="username-form" type="text" name="username"  onChange={handleChange} />
                 </span>
                 <span className="input-container">
                     <p>PASSWORD</p>
-                    <input type="password" name="password" onChange={handleChange} />
+                    <input className="password-form" type="password" name="password" onChange={handleChange} />
                 </span>
-
-                <button className="login-button" onClick={login}>LOGIN</button>
+                <div className="loginbutton-padding">
+                    <button className="login-button" onClick={login}>LOGIN</button>
+                    <button className="signup-button" name="signup-button" onClick={handleChange}>SIGN UP</button>
+                </div>
             </div>
-
-
-
         </div>
+
+
+
+        
     )
 }

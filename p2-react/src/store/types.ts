@@ -25,7 +25,7 @@ export interface IMixedLetters {
 
 export type AppState = {
     user:IUser,
-    leaderboard:ILeaderboard,
+    leaderboard:ILeaderboard[],
     words:IWords,
     mixedLetters:IMixedLetters
 }

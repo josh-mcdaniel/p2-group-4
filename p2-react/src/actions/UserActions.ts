@@ -7,11 +7,15 @@ interface UserLogin {
     password: string
 }
 
+
+
 /*interface NewUser {
     username: string,
     password: string,
     email: string
 }*/
+
+
 
 
 export const loginUser = (loginCreds:UserLogin) =>  async (dispatch: any) => {
@@ -46,10 +50,11 @@ export const loginUser = (loginCreds:UserLogin) =>  async (dispatch: any) => {
 /*export const registerUser = (UserCreds:NewUser) => async (dispatch:any) => {
     try {
 
-        const response = await axios.post('projdb.cbwacvu5rhbu.us-east-1.rds.amazonaws.com:5432/register', UserCreds);
+        const response = await axios.post('http://localhost:5000/register', UserCreds);
         if (response.status === 201) {
             console.log(response);
             UserCreds = {
+
 
             }
         }

@@ -38,12 +38,14 @@ VALUES
 ('NABRSA'),
 ('LOPSNT');
 
+SELECT * FROM mixed_letters 
+
 CREATE TABLE words (
 words_id SERIAL PRIMARY KEY,
 word VARCHAR(6) NOT NULL,
 mixed_letters_fk int REFERENCES mixed_letters (mixed_letters_id) NOT NULL
 );
-
+SELECT * FROM users
 DROP TABLE mixed_letters
 DROP TABLE words
 DROP TABLE users

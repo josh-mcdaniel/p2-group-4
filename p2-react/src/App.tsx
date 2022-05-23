@@ -6,6 +6,7 @@ import { Login } from './components/Login/Login';
 import { MainPage } from './components/MainPage/mainpage';
 import { Game } from './components/Game/Game';
 import { UserScore } from './components/UserScore/UserScore';
+import { Leaderboard } from './components/Leaderboard/Leaderboard';
 
 function App() {
     return (
@@ -24,7 +25,7 @@ function App() {
                     <Route path='/myScores' element={<UserScore/>}/>
                 </Routes>
                 <Routes>
-                    <Route path='/leaderboard' element={<UserScore/>}/>
+                    <Route path='/leaderboard' element={<Leaderboard/>}/>
                 </Routes>
             </Router>
         </div>

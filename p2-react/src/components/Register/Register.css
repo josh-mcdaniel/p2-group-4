@@ -50,6 +50,8 @@ p:hover {
     font-variation-settings: "wght" 311;
     margin-bottom: 0.8rem;
     color: PaleGoldenRod;
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
 }
 
 .form-animation {

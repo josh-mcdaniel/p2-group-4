@@ -4,7 +4,10 @@ import com.revature.daos.UserDAO;
 import com.revature.models.LoginDTO;
 import com.revature.models.User;
 
+//this class is generally used to make the code more easy to read
+//just transfering data from that was gotten from the frontend and inputting them into DAOS
 public class AuthService {
+	
 
 	UserDAO uDAO = new UserDAO();
 	
@@ -23,4 +26,5 @@ public class AuthService {
 		uDAO.insertUser(user);
 		
 	}
+
 }

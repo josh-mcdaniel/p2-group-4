@@ -1,4 +1,3 @@
-
 package com.revature.controllers;
 
 import com.google.gson.Gson;
@@ -9,7 +8,7 @@ import com.revature.services.AuthService;
 import io.javalin.http.Handler;
 
 public class AuthController {
-
+	
 	AuthService as = new AuthService();
 	
 	
@@ -47,6 +46,8 @@ public class AuthController {
 	};
 	
 	public Handler insertUserHandler = (ctx) -> {
+		
+		if(ctx.req.getSession() != null) {
 			
 			String body = ctx.body();
 			
@@ -54,19 +55,11 @@ public class AuthController {
 			//converting new user information from JSON -> Java object
 			User user = gson.fromJson(body, User.class);
 			//inputting the new user into the database
-			if (user != null) {
-				
 			as.insertUser(user);
 			//setting the status code
 			ctx.status(201);
 			
-			System.out.println("New User added successfully!!");
-			
-		} else {
-			
-			ctx.status(400);
-			
-			System.out.println("Bad Request: New user recieved as null");
 		}
 	};
+
 }

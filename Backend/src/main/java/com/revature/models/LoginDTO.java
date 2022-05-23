@@ -1,7 +1,7 @@
 package com.revature.models;
 
 public class LoginDTO {
-
+	
 	private String username;
 	private String password;
 	
@@ -45,4 +45,6 @@ public class LoginDTO {
 	public String toString() {
 		return "LoginDTO [username=" + username + ", password=" + password + "]";
 	}
+
+
 }

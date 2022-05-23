@@ -1,30 +1,115 @@
 .login {
-    width:fit-content;
-    margin:auto;
-    
+    width: fit-content;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     border-width: 10px;
     border-style: solid;
-    border-color: rgb(26, 182, 33);
-    
+    border-color: PaleGoldenRod;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
 }
 
 .text-container {
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 100px;
-    padding: 50px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: rgb(26, 182, 33);
-    border-right-width: 0px;
-    border-left-width: 0px;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: PaleGoldenRod;
 }
+
+.username {
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+}
+
+.username {
+    font-size: 1.2em;
+    line-height: 150%;
+    text-align: center;
+    color: MintCream;
+    letter-spacing: .5px;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+}
+
+.username:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+    color: antiquewhite;
+}
+
+.password {
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+}
+
+.password {
+    font-size: 1.2em;
+    line-height: 150%;
+    text-align: center;
+    color: MintCream;
+    letter-spacing: .5px;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+}
+
+.password:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+    color: antiquewhite;
+}
+
+.sign-in {
+    font-size: 1.2em;
+    line-height: 150%;
+    text-align: center;
+    color: MintCream;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+}
+
+.sign-in:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+    color: antiquewhite;
+}
+
+.password-form,
+.username-form {
+    border-color: PaleGoldenRod;
+}
+
+.password-form:hover,
+.username-form:hover {
+    border-color: PaleGoldenRod;
+}
+
 
 /*.input-container {
     height: 10px;
@@ -47,29 +132,30 @@
     width: 250px;
     margin-top: 50px;
     margin-left: auto;
-    margin-right:auto;
+    margin-right: auto;
     border-style: solid;
-    border-color: rgb(26, 182, 33);
-    color: rgb(26, 182, 33);
+    color: PaleGoldenRod;
     border-width: 3px;
-    border-style:;
     font-size: 1.2rem;
     font-weight: 400;
     padding: auto;
-    margin-top: 10px;
+    margin-top: 40px;
     margin-bottom: 10px;
+}
+
+.loginbutton-padding {
+    padding-bottom: 50px;
 }
 
 .login-button:hover {
     background-color: rgb(15, 54, 16);
-    border:3px solid rgb(30, 223, 40);
-    box-shadow: 0 0 10px rgb(26, 182, 33);
+    box-shadow: 0 0 10px rgb(30, 34, 30);
+    color: rgb(26, 182, 33);
     cursor: pointer;
+    border-color: 3px solid PaleGoldenRod;
 }
 
-
-
-input{
+input {
     border-style: style;
     width: stretch;
     height: 25px;
@@ -79,30 +165,83 @@ input{
     color: rgb(26, 182, 33);
     background: black;
     border-style: solid;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
 }
 
 input:hover {
-
     background-color: rgb(15, 54, 16);
-    border:3px solid rgb(30, 223, 40);
-    box-shadow: 0 0 10px rgb(26, 182, 33);
 }
 
-input:focus{
+input:focus {
     outline: none !important;
-    border:3px solid rgb(30, 223, 40);
+    border: 3px solid rgb(30, 223, 40);
     box-shadow: 0 0 10px rgb(26, 182, 33);
 }
 
 header {
     border-style: solid;
-    border-color: rgb(26, 182, 33);
+    border-color: PaleGoldenRod;
     border-width: 10px;
-    margin:50px;
-    margin-top: 0px;
+    margin: 50px;
+    margin-top: 30px;
     font-size: 20px;
     border-top-width: 0px;
     padding-left: 10px;
     padding-right: 10px;
-    
+}
+
+header h1 {
+    font-family: 'Odibee Sans', cursive;
+    font-size: 120px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+}
+
+header h1:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+
+.container {
+    font-family: 'Odibee Sans', cursive;
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+}
+
+header h1:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+
+.bottom-text {
+    font-family: 'Odibee Sans', cursive;
+    font-size: 4vh;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+}
+
+.user-guess {
+    border-color: palegoldenrod;
 }

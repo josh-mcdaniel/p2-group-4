@@ -1,0 +1,105 @@
+.input-form-borders,
+.input-form-borders3 {
+    border-style: style;
+    width: stretch;
+    height: 25px;
+    border-color: rgb(26, 182, 33);
+    border-width: 3px;
+    margin-bottom: 15px;
+    color: rgb(26, 182, 33);
+    background: black;
+    border-style: solid;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    border-color: palegoldenrod;
+    border-style: ridge;
+}
+
+h1 {
+    font-size: 120px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+}
+
+h3,
+p {
+    font-family: 'Odibee Sans', cursive;
+    text-transform: uppercase;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+}
+
+h3:hover,
+p:hover {
+    text-transform: uppercase;
+    font-family: 'Odibee Sans', cursive;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+
+.form-animation {
+    text-transform: uppercase;
+    font-family: 'Odibee Sans', cursive;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+}
+
+.form-animation:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+
+#text-container {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: PaleGoldenRod;
+}
+
+.login-button {
+    font-family: 'Odibee Sans', cursive;
+    text-transform: uppercase;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+}
+
+.input-container2,
+.input-container1,
+.input-container,
+.input-form-borders3 {
+    margin-top: -30px;
+}
+
+.sign-up-div {
+    margin-top: -40px;
+    align-items: center;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}

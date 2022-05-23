@@ -1,0 +1,37 @@
+.timer:hover {
+    border-color: palegoldenrod;
+    color: red;
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+
+h3 {
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    outline: none;
+    text-align: center;
+}
+
+h3:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+
+input {
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    outline: none;
+    text-align: center;
+}
+
+.user-guess {
+    color: rgb(241, 226, 228);
+    border-radius: 10px;
+    font-size: 100px;
+}

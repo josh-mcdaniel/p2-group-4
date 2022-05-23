@@ -7,7 +7,7 @@ let initialState:IUser = {
     password:"",
     email:"",
     score:0,
-    gamesPlayed:0
+    
 }
 
 type Action = {type:string, payload:any};

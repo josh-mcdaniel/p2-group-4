@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { loginUser } from "../../actions/UserActions"
 import { MainPage } from "../MainPage/mainpage"
-
 import "./Login.css"
+
+
 
 export const Login: React.FC<any> = () => {
 
@@ -44,6 +45,8 @@ export const Login: React.FC<any> = () => {
             
             <header>
                 <h1 className="welcom-top">WELCOME TO CODALZ!</h1>
+                
+                
             </header>
             <div className="text-container">
                 <h3 className="sign-in">SIGN IN BELOW TO START DECODING</h3>

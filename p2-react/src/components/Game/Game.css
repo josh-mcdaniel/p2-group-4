@@ -1,7 +1,9 @@
 .user-guess {
     font-size: .4em;
     line-height: 150%;
-    height: 1%;
+    height: -2%;
+    height: 4%;
+    width: 20%;
     text-align: center;
     color: MintCream;
     letter-spacing: .5px;
@@ -10,8 +12,34 @@
 
 .user-guess:hover {
     font-size: 1px;
+    height: -2%;
+    height: 4%;
     color: azure;
     font-size: 40px;
     text-align: center;
     line-height: 150%;
+    width: 70%;
+    transition: 700ms ease;
+}
+
+.border-around-game {
+    width: 50%;
+    height: 2%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: PaleGoldenRod;
+    border-radius: 10px;
+    padding-top: 10px;
+    align-items: center;
+    color: PaleGoldenRod;
+    margin-top: 10px;
+}
+
+.App {
+    padding-bottom: 80px;
+    padding-top: 30px;
 }

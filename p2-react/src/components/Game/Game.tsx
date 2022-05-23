@@ -38,7 +38,7 @@ export const Game: React.FC<any> = (props) => {
 
 
     return(
-        <div >
+        <div className="border-around-game">
             <div className="container">
                 <h3>TIME REMAINING</h3>
                 <CountDownTimer minutes={1} seconds={60}  />

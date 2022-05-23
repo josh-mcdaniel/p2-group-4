@@ -4,6 +4,7 @@ export interface IUser {
     password:"",
     email:""
     score: 0
+    
 }
 
 export interface ILeaderboard {

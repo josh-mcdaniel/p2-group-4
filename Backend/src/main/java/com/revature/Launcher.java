@@ -1,8 +1,8 @@
 package com.revature;
 
 import com.revature.controllers.AuthController;
+import com.revature.controllers.LeaderboardController;
 import com.revature.controllers.MixedLettersController;
-import com.revature.models.User;
 
 import io.javalin.Javalin;
 
@@ -15,6 +15,7 @@ public class Launcher {
 		
 		AuthController ac = new AuthController();
 		
+		LeaderboardController lc = new LeaderboardController();
 		
 		MixedLettersController mlc = new MixedLettersController();
 		
@@ -35,6 +36,8 @@ public class Launcher {
 		app.post("/addML", mlc.insertMLHandler);
 		
 		app.post("/getML", mlc.getMLHandler);
+		
+		app.get("/leaderboard", lc.showAllScoresHandler);
 		
 		app.put("/updateScore", ac.updateUserHandler);
 	}

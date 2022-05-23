@@ -73,10 +73,21 @@ body {
     padding: 10px;
 }
 
+#start-button:hover,
+#score-button:hover,
+#logout-button:hover,
+#leaderboard:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+    text-shadow: 1px;
+    color: rgb(222, 212, 194);
+}
+
 .black-buttons {
     align-items: right;
     background-color: rgb(202, 154, 112);
     margin: 300px;
+    border-radius: 90px;
 }
 
 #logout_page {

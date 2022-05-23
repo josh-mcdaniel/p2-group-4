@@ -25,11 +25,11 @@ export const MainPage: React.FC<any> = () => {
         } else if (e.target.name === "leaderboard") {
             navigate("/leaderboard")
         } else {
-            navigate("/login")
+            navigate("/")
         }
     }
     return(
-    <div>
+    <div className="black-buttons">
            
     
         <h1>Codalz</h1>

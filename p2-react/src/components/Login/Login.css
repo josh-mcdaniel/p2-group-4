@@ -83,26 +83,41 @@
     color: antiquewhite;
 }
 
-.sign-in {
-    font-size: 1.2em;
-    line-height: 150%;
-    text-align: center;
-    color: MintCream;
-    letter-spacing: -3px;
-    transition: 700ms ease;
-    margin-bottom: 0.8rem;
+.signup-button {
+    background: black;
+    width: 250px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
     color: PaleGoldenRod;
+    border-width: 3px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: auto;
+    
+    margin-bottom: 10px;
 }
 
-.sign-in:hover {
+.signup-button:hover {
     font-variation-settings: "wght" 582;
     letter-spacing: 1px;
     color: antiquewhite;
+    cursor: pointer;
 }
 
 .password-form,
 .username-form {
-    border-color: PaleGoldenRod;
+    font-size: 1.2em;
+    line-height: 150%;
+    text-align: center;
+    color: MintCream;
+    letter-spacing: .2px;
+    
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
 }
 
 .password-form:hover,
@@ -148,21 +163,24 @@
 }
 
 .login-button:hover {
-    background-color: rgb(15, 54, 16);
-    box-shadow: 0 0 10px rgb(30, 34, 30);
-    color: rgb(26, 182, 33);
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+    color: antiquewhite;
     cursor: pointer;
-    border-color: 3px solid PaleGoldenRod;
+    box-shadow: palegoldenrod 5px;
+    
 }
+
+
 
 input {
     border-style: style;
     width: stretch;
     height: 25px;
-    border-color: rgb(26, 182, 33);
+    border-color:palegoldenrod;
     border-width: 3px;
     margin-bottom: 15px;
-    color: rgb(26, 182, 33);
+    color:palegoldenrod;
     background: black;
     border-style: solid;
     letter-spacing: -3px;
@@ -172,13 +190,14 @@ input {
 }
 
 input:hover {
-    background-color: rgb(15, 54, 16);
+    background-color: palegoldenrod 30%;
+    
 }
 
 input:focus {
     outline: none !important;
-    border: 3px solid rgb(30, 223, 40);
-    box-shadow: 0 0 10px rgb(26, 182, 33);
+    border: 3px solid palegoldenrod;
+    box-shadow: 0 0 10px palegoldenrod;
 }
 
 header {

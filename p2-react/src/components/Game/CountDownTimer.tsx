@@ -17,7 +17,7 @@ const CountDownTimer = ({minutes = 0, seconds = 60 }: ICountdown) => {
     const tick = () => {
    
         if (time.minutes === 0 && time.seconds === 0) 
-            navigate('/leaderboard');
+            navigate('/home');
          else if (time.seconds === 0) {
             setTime({minutes: time.minutes - 1, seconds: 59});
         } else {

@@ -40,6 +40,8 @@ public class Launcher {
 		app.get("/leaderboard", lc.showAllScoresHandler);
 		
 		app.put("/updateScore", ac.updateUserHandler);
+		
+		app.post("/register", ac.insertUserHandler);
 	}
 
 }

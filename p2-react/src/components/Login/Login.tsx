@@ -60,6 +60,7 @@ export const Login: React.FC<any> = () => {
                 </span>
                 <div className="loginbutton-padding">
                     <button className="login-button" onClick={login}>LOGIN</button>
+                    <h3></h3>
                     <button className="signup-button" name="signup-button" onClick={handleChange}>SIGN UP</button>
                 </div>
             </div>

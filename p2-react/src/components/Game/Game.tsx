@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 
-import CountDownTimer, {ICountdown} from "./CountDownTimer/CountDownTimer"
+import CountDownTimer, {ICountdown} from "./CountDownTimer"
 import { getRandomString, getWord } from "../../actions/GameActions"
 import { WordDisplay } from "./WordDisplay"
 import { updateUser } from "../../actions/UserActions"
+
+import "./Game.css"
 
 export const Game: React.FC<any> = (props) => {
 
@@ -34,6 +36,7 @@ export const Game: React.FC<any> = (props) => {
             setScore(e.target.value.length)
             console.log(score)
          }
+         
      }
 
      const loadWord = async () => {
@@ -68,18 +71,18 @@ export const Game: React.FC<any> = (props) => {
     return(
         <div className="border-around-game" >
             <div className="container">
-                <h3>TIME REMAINING</h3>
+                <h3 className="header">TIME REMAINING</h3>
                 <CountDownTimer minutes={1} seconds={60}  />
             </div>
             <div className="container">
-                <h3 onClick={getRS}>YOUR RANDOM STRING</h3>
-                <div>{string}</div>
+                <h3 onLoad={handleChange}>YOUR RANDOM STRING</h3>
+                <div >{string}</div>
                 
                 
             </div>
             <div className="container">
                 <h3>GUESS HERE!</h3>
-                <input type="text" name="answerInput" onChange={handleChange}/>
+                <input type="text" name="answerInput" className="answerInput" onChange={handleChange}/>
                 <button className="wordButton" onClick={loadWord}>SUBMIT</button>
             </div>
             <div className="table-div">

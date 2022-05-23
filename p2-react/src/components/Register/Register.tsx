@@ -41,7 +41,7 @@ export const Register: React.FC<any> = () => {
             </div>
             <div className='input-container2'>
                 <p className='form-animation'>EMAIL</p>
-                <input className='input-form-borders' type="email" name="email" onChange={handleChange} />
+                <input className='input-form-borders3' type="email" name="email" onChange={handleChange} />
             </div>
             <div className='sign-up-div'>
             <button className="login-button" onClick={register}>SIGN UP</button>

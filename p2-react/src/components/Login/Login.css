@@ -9,6 +9,8 @@
     border-color: PaleGoldenRod;
     border-radius: 10px;
     padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: black;
 }
 
 .text-container {
@@ -242,4 +244,8 @@ header h1:hover {
 
 .user-guess {
     border-color: palegoldenrod;
+}
+
+.App {
+    padding-bottom: 10px;
 }

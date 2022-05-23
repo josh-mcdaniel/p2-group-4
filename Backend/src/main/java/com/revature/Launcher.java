@@ -36,6 +36,7 @@ public class Launcher {
 		
 		app.post("/getML", mlc.getMLHandler);
 		
+		app.put("/updateScore", ac.updateUserHandler);
 	}
 
 }

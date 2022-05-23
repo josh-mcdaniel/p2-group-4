@@ -27,8 +27,14 @@ const initialState:AppState = {
         id:0,
         mixedLetters:""
 
-    }
+    },
+    word: {
 
+        word: "",
+        Notword:"",
+        isValid: false
+        
+    }
 }
 
 export const store = configureStore({

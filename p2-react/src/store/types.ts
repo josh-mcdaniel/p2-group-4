@@ -25,9 +25,21 @@ export interface IMixedLetters {
     mixedLetters:string
 }
 
+export interface Iword {
+
+    word: string,
+    Notword: string,
+    isValid: boolean
+ 
+} 
+
+
+
 export type AppState = {
     user:IUser,
     leaderboard:ILeaderboard,
     words:IWords,
-    mixedLetters:IMixedLetters
+    mixedLetters:IMixedLetters,
+    word:Iword
+
 }

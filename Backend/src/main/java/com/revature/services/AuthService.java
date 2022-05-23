@@ -23,4 +23,9 @@ public class AuthService {
 		uDAO.insertUser(user);
 		
 	}
+	
+	public void updateUser (User user) {
+		
+		uDAO.updateUser(user);
+	}
 }

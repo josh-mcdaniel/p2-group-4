@@ -28,6 +28,13 @@ public class WordsDAO {
 		return wordList;
 	}
 	
+	/*public Words getWordsByMLFK(MixedLetters ml) {
+		
+		Session ses = HibernateUtil.getSession();
+		
+		Words w = ses.get(Words, id)
+	}*/
+	
 	public void insertWord(Words word) {
 		
 		Session ses = HibernateUtil.getSession();

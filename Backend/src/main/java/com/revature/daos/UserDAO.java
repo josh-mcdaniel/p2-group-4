@@ -86,11 +86,14 @@ public class UserDAO {
 	
 	public void updateUser(User user) {
 		
+		System.out.println(user.toString());
 		Session ses = HibernateUtil.getSession();
 		
 		Transaction tran = ses.beginTransaction();
 		
-		ses.merge(user);
+		Query q = ses.createQuery("UPDATE User SET score = '" + user.getScore() + "' WHERE user_id = " + user.getUser_id() );
+		
+		q.executeUpdate();
 		
 		tran.commit();
 		

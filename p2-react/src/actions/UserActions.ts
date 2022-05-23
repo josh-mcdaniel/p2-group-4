@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import { IUser } from "../store/types"
-import { LOGIN_USER } from "./actionTypes";
+import { LOGIN_USER, UPDATE_USER } from "./actionTypes";
 
 
 
@@ -64,3 +64,35 @@ export const loginUser = (loginCreds:UserLogin) => async (dispatch:any) => {
         
     }
 }*/
+interface score {
+    score: number
+}
+export const updateUser = (user:IUser, score:number) => async (dispatch:any) => {
+
+    let newUser: IUser = {
+        id: user.id,
+        username: user.username,
+        password: user.password,
+        email: user.email,
+        score: score,
+        gamesPlayed: user.gamesPlayed
+
+    }
+    try {
+
+        const response = await axios.put('http://localhost:5000/updateScore', newUser)
+
+        if (response.status === 200) {
+            console.log(response);
+
+
+            return dispatch({
+                type: UPDATE_USER,
+                payload: newUser
+            })
+
+        }
+    } catch (e) {
+        console.log("SCORE UPDATE FAILED")
+    }
+}

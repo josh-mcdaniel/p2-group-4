@@ -69,4 +69,23 @@ public class AuthController {
 			System.out.println("Bad Request: New user recieved as null");
 		}
 	};
+	
+	public Handler updateUserHandler = (ctx) -> {
+		
+		String body = ctx.body();
+		System.out.println(body);
+		Gson gson = new Gson();
+		
+		User user = gson.fromJson(body, User.class);
+		
+		if (user != null) {
+			System.out.println(user.toString());
+			
+			as.updateUser(user);
+			
+			ctx.status(200);
+		} else {
+			ctx.status(400);
+		}
+	};
 }

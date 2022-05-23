@@ -1,6 +1,7 @@
 export const ADD_USER = 'ADD_USER';
 export const LOGIN_USER = 'LOGIN_USER';
 export const UPDATE_USER = "UPDATE_USER";
+export const UPDATE_SCORE = 'UPDATE_SCORE'
 
 export const UPDATE_LEADERBOARD = 'UPDATE_LEADERBOARD'
 
@@ -11,4 +12,4 @@ export const UPDATE_MIXED_LETTERS = 'UPDATE_MIXED_LETTERS'
 export const GET_MIXED_LETTERS = 'GET_MIXED_LETTERS'
 
 
-
+export const GET_WORD = 'GET_WORD';

@@ -141,6 +141,10 @@
     margin-bottom: 10px;
 }
 
+.loginbutton-padding {
+    padding-bottom: 50px;
+}
+
 .login-button:hover {
     background-color: rgb(15, 54, 16);
     box-shadow: 0 0 10px rgb(30, 34, 30);

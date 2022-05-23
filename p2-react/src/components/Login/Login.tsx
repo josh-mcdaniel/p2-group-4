@@ -59,8 +59,9 @@ export const Login: React.FC<any> = () => {
                     <p className="password">PASSWORD</p>
                     <input className="password-form" type="password" name="password" onChange={handleChange} />
                 </span>
-
+        <div className="loginbutton-padding">
                 <button className="login-button" onClick={login}>LOGIN</button>
+                </div>
             </div>
 
 

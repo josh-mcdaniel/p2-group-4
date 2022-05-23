@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
+import {LOG_OUT_USER} from '../../actions/actionTypes'
 
 import "./mainpage.css"
 
@@ -20,7 +21,11 @@ export const MainPage: React.FC<any> = () => {
         } else if (e.target.name === "leaderboard") {
             navigate("/leaderboard")
         } else if (e.target.name === "logout") {
+
+            dispatch({ type: LOG_OUT_USER, payload: null })
             navigate("/")
+
+
         }
     }
     return(

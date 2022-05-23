@@ -25,6 +25,8 @@ public class User {
 
 	@Column
 	private int score;
+	@Column
+	private int games_played;
 
 
 	public User() {

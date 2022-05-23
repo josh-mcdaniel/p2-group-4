@@ -27,10 +27,10 @@ export const Leaderboard: React.FC<any> = () => {
                 <tbody>
                     {/* @ts-ignore */}
                     {leaderboard.map((l: any) => {
-                        return  <div key={l.user_id}>
-                                <div>{l.score}</div>
-                                <div>{l.username}</div>
-                            </div>;
+                        return  <tr key={l.user_id}>
+                                <td>{l.score}</td>
+                                <td>{l.username}</td>
+                            </tr>;
                     })}
                 </tbody>
             </table>

@@ -36,6 +36,7 @@ public class Launcher {
 		app.get("/leaderboard", lc.showAllScoresHandler); //top scores
 		app.post("/insertScore", lc.insertScoreHandler);
 		app.get("/showUsers", ac.showAllUsersHandler);
+		app.post("/register", ac.insertUserHandler);
 
 }
 

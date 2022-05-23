@@ -16,14 +16,16 @@ export const Login: React.FC<any> = () => {
     const navigate = useNavigate();
 
     const handleChange = (e:any) => {
-        if(e.target.name === "username") {
+        if (e.target.name === "username") {
             setUsername(e.target.value)
             console.log(username)
         } else {
             setPassword(e.target.value)
         }
+        if (e.target.name === "signup-button") {
+            navigate("/register")
+        }
     }
-
     const login = async () => {
 
         await dispatch(
@@ -56,6 +58,7 @@ export const Login: React.FC<any> = () => {
                 </span>
 
                 <button className="login-button" onClick={login}>LOGIN</button>
+                <button className="signup-button" name="signup-button" onClick={handleChange}>SIGN UP</button>
             </div>
 
 

@@ -7,6 +7,7 @@ import { MainPage } from './components/MainPage/mainpage';
 import { Game } from './components/Game/Game';
 import { UserScore } from './components/UserScore/UserScore';
 import { Leaderboard } from './components/Leaderboard/Leaderboard';
+import { Register } from './components/Register/Register';
 
 function App() {
     return (
@@ -14,6 +15,9 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={<Login/>}/>
+                </Routes>
+                <Routes>
+                    <Route path="/register" element={<Register/>}/>
                 </Routes>
                 <Routes>
                     <Route path="/home" element={<MainPage/>}/>

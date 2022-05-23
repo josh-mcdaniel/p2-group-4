@@ -12,6 +12,12 @@ export interface ILeaderboard {
     uId:0
 }
 
+export interface INewUser {
+    username:"",
+    password:"",
+    email:""
+}
+
 export interface IWords {
     id:0,
     word:"",

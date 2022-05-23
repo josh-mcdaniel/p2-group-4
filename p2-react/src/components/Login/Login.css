@@ -203,3 +203,43 @@ header h1:hover {
     font-variation-settings: "wght" 582;
     letter-spacing: 1px;
 }
+
+.container {
+    font-family: 'Odibee Sans', cursive;
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+}
+
+header h1:hover {
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+}
+
+.bottom-text {
+    font-family: 'Odibee Sans', cursive;
+    font-size: 4vh;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: PaleGoldenRod;
+    outline: none;
+    text-align: center;
+}
+
+.user-guess {
+    border-color: palegoldenrod;
+}
+
+.user-guess:hover {
+    border-color: palegoldenrod;
+    color: red;
+}

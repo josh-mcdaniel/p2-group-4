@@ -21,3 +21,21 @@ code {
     outline: none;
     text-align: center;
 }
+
+.user-guess {
+    border-color: palegoldenrod;
+    color: rgb(243, 226, 226);
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+    color: white;
+    width: 13%;
+}
+
+.user-guess:hover {
+    border-color: palegoldenrod;
+    color: rgb(243, 226, 226);
+    width: 20%;
+    font-variation-settings: "wght" 582;
+    letter-spacing: 1px;
+    color: white;
+}

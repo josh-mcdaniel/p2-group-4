@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom"
 import CountDownTimer, {ICountdown} from "./CountDownTimer/CountDownTimer"
 import { getRandomString } from "../../actions/GameActions"
 
+import "./Game.css"
+
 export const Game: React.FC<any> = (props) => {
 
     const appState = useSelector<any, any>((state) => state);
@@ -49,14 +51,16 @@ export const Game: React.FC<any> = (props) => {
             </div>
             <div className="container">
                 <h3>GUESS HERE!</h3>
-                <input type="text"  />
+                <div className="input-form-size">
+                <input className="user-guess" type="text"  />
+                </div>
             </div>
             <div>
                 <div>
-                    <h3>YOUR CORRECT GUESSES</h3>
+                    <h3 className="bottom-text">YOUR CORRECT GUESSES</h3>
                 </div>
                 <div>
-                    <h3>YOUR LAST GUESS</h3>
+                    <h3 className="bottom-text">YOUR LAST GUESS</h3>
                 </div>
             </div>
         </div>

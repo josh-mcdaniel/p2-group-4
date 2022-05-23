@@ -1,0 +1,17 @@
+.user-guess {
+    font-size: .4em;
+    line-height: 150%;
+    height: 1%;
+    text-align: center;
+    color: MintCream;
+    letter-spacing: .5px;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.user-guess:hover {
+    font-size: 1px;
+    color: azure;
+    font-size: 40px;
+    text-align: center;
+    line-height: 150%;
+}

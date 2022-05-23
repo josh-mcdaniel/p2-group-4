@@ -42,18 +42,18 @@ export const Login: React.FC<any> = () => {
     return(
         <div className="login">
             <header>
-                <h1>WELCOME TO CODALZ!</h1>
+                <h1 className="welcom-top">WELCOME TO CODALZ!</h1>
             </header>
             <div className="text-container">
-                <h3>SIGN IN BELOW TO START DECODING</h3>
+                <h3 className="sign-in">SIGN IN BELOW TO START DECODING</h3>
                 
                 <span className="input-container">   
-                    <p>USERNAME</p>    
-                    <input type="text" name="username"  onChange={handleChange} />
+                    <p className="username">USERNAME</p>    
+                    <input className="username-form" type="text" name="username"  onChange={handleChange} />
                 </span>
                 <span className="input-container">
-                    <p>PASSWORD</p>
-                    <input type="password" name="password" onChange={handleChange} />
+                    <p className="password">PASSWORD</p>
+                    <input className="password-form" type="password" name="password" onChange={handleChange} />
                 </span>
 
                 <button className="login-button" onClick={login}>LOGIN</button>

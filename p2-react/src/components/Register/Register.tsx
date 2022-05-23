@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import {RegisterUser, registerUser } from '../../actions/UserActions';
+import './Register.css';
 export const Register: React.FC<any> = () => {
 
     const [user, setUser] = useState({});
@@ -30,19 +31,21 @@ export const Register: React.FC<any> = () => {
         <div className="text-container">
             <h3>FILL OUT THE FIELDS BELOW TO REGISTER</h3>
 
-            <span className="input-container">
-                    <p>USERNAME</p>
-                    <input type="text" name="username" id="username" onChange={handleChange} />
-                </span>
-            <span className="input-container">
-                    <p>PASSWORD</p>
-                    <input type="password" name="password" onChange={handleChange} />
-                </span>
-            <span className="input-container">
-                <p>EMAIL</p>
-                <input type="email" name="email" onChange={handleChange} />
-            </span>
+            <div className="input-container">
+                    <p className='form-animation'>USERNAME</p>
+                    <input className='input-form-borders' type="text" name="username" id="username" onChange={handleChange} />
+                </div>
+            <div className="input-container">
+                    <p className='form-animation'>PASSWORD</p>
+                    <input className='input-form-borders' type="password" name="password" onChange={handleChange} />
+            </div>
+            <div className='input-container'>
+                <p className='form-animation'>EMAIL</p>
+                <input className='input-form-borders' type="email" name="email" onChange={handleChange} />
+            </div>
+            <div className='sign-up-div'>
             <button className="login-button" onClick={register}>SIGN UP</button>
+       </div>
         </div>
         </div>)
 }

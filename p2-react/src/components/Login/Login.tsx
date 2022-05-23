@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { loginUser } from "../../actions/UserActions"
-import "./Login.css"
+//import "./Login.css"
 
 export const Login: React.FC<any> = () => {
 
@@ -49,16 +49,17 @@ export const Login: React.FC<any> = () => {
                 <h3>SIGN IN BELOW TO START DECODING</h3>
 
                 <span className="input-container">
-                    <p>USERNAME</p>
-                    <input type="text" name="username" id="username" onChange={handleChange} />
+                    <p className="username">USERNAME</p>
+                    <input className="username-form" type="text" name="username" id="username" onChange={handleChange} />
                 </span>
                 <span className="input-container">
-                    <p>PASSWORD</p>
-                    <input type="password" name="password" onChange={handleChange} />
+                    <p className="password">PASSWORD</p>
+                    <input className="password-form" type="password" name="password" onChange={handleChange} />
                 </span>
-
+                <div className="loginbutton-padding">
                 <button className="login-button" onClick={login}>LOGIN</button>
                 <button className="signup-button" name="signup-button" onClick={handleChange}>SIGN UP</button>
+                </div>
             </div>
 
 

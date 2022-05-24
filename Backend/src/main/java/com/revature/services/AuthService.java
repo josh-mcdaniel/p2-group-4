@@ -27,6 +27,11 @@ public class AuthService {
 
     }
 
+    public void updateUser (User user) {
+
+        uDAO.updateUser(user);
+    }
+
     public List<User> showAllUsers() {
         List<User> userList = uDAO.showAllUsers();
         return userList;

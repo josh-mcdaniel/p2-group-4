@@ -1,0 +1,82 @@
+.user-guess {
+    font-size: .4em;
+    line-height: 150%;
+    height: -2%;
+    height: 4%;
+    width: 20%;
+    text-align: center;
+    color: MintCream;
+    letter-spacing: .5px;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.user-guess:hover {
+    font-size: 1px;
+    height: -2%;
+    height: 4%;
+    color: azure;
+    font-size: 25px;
+    text-align: center;
+    line-height: 150%;
+    width: 70%;
+    transition: 700ms ease;
+}
+
+.border-around-game {
+    width: 50%;
+    height: 2%;
+    margin: auto;
+    margin-bottom: 50%;
+    display: flex;
+    font-size: 25px;
+    flex-direction: column;
+    justify-content: center;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: PaleGoldenRod;
+    border-radius: 10px;
+    padding-top: 10px;
+    align-items: center;
+    color: PaleGoldenRod;
+    margin-top: 10px;
+}
+
+.App {
+    padding-bottom: 80px;
+    padding-top: 30px;
+}
+
+.answerInput {
+    margin-right: 130px;
+    margin-left: 130px;
+    border-color: PaleGoldenRod;
+    letter-spacing: .3px;
+
+
+}
+
+.wordButton {
+    background: black;
+    width: 250px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    color: PaleGoldenRod;
+    border-width: 3px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+tbody {
+    border-color: PaleGoldenRod;
+    border-width: 1px;
+}
+
+.container {
+    font-size: 25px;
+}

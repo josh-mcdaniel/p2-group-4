@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { loginUser } from "../../actions/UserActions"
-//import "./Login.css"
+import { MainPage } from "../MainPage/mainpage"
+
+import "./Login.css"
 
 export const Login: React.FC<any> = () => {
 
-    const user = useSelector<any, any>((state) => state.user);
+    const appState = useSelector<any, any>((state) => state);
 
     const dispatch = useDispatch();
 
@@ -16,7 +18,7 @@ export const Login: React.FC<any> = () => {
     const navigate = useNavigate();
 
     const handleChange = (e:any) => {
-        if (e.target.name === "username") {
+        if(e.target.name === "username") {
             setUsername(e.target.value)
             console.log(username)
         } else {
@@ -26,19 +28,19 @@ export const Login: React.FC<any> = () => {
             navigate("/register")
         }
     }
-    const login = async () => {
 
+    const login = async () => {
         await dispatch(
             loginUser({username, password}) as any
         )
-        console.log(user);
+
     }
 
     useEffect(() => {
-        if (user.id > 0) {
+        if (appState.user.id > 0) {
             navigate("/home");
         }
-    }, [user.id])
+    }, [appState.user.id])
 
     return(
         <div className="login">
@@ -46,24 +48,26 @@ export const Login: React.FC<any> = () => {
                 <h1>WELCOME TO CODALZ!</h1>
             </header>
             <div className="text-container">
-                <h3>SIGN IN BELOW TO START DECODING</h3>
+                <h3 className="sign-in">SIGN IN BELOW TO START DECODING</h3>
 
                 <span className="input-container">
-                    <p className="username">USERNAME</p>
-                    <input className="username-form" type="text" name="username" id="username" onChange={handleChange} />
+                    <p>USERNAME</p>
+                    <input className="username-form" type="text" name="username"  onChange={handleChange} />
                 </span>
                 <span className="input-container">
-                    <p className="password">PASSWORD</p>
+                    <p>PASSWORD</p>
                     <input className="password-form" type="password" name="password" onChange={handleChange} />
                 </span>
                 <div className="loginbutton-padding">
-                <button className="login-button" onClick={login}>LOGIN</button>
-                <button className="signup-button" name="signup-button" onClick={handleChange}>SIGN UP</button>
+                    <button className="login-button" onClick={login}>LOGIN</button>
+                    <h3></h3>
+                    <button className="signup-button" name="signup-button" onClick={handleChange}>SIGN UP</button>
                 </div>
             </div>
-
-
-
         </div>
+
+
+
+
     )
 }

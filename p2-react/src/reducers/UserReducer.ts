@@ -6,7 +6,8 @@ const initialState:IUser = {
     username:"",
     password:"",
     email:"",
-    score:0
+    score:0,
+    gamesPlayed:0
 }
 
 type Action = {type:string, payload:any};

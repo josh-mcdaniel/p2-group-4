@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export interface ICountdown {
 
@@ -11,11 +12,11 @@ const CountDownTimer = ({minutes = 0, seconds = 60 }: ICountdown) => {
 
     const [time, setTime] = React.useState<ICountdown>({minutes, seconds});
 
-
+    const navigate = useNavigate();
     const tick = () => {
 
         if (time.minutes === 0 && time.seconds === 0)
-            reset()
+            navigate('/home');
         else if (time.seconds === 0) {
             setTime({minutes: time.minutes - 1, seconds: 59});
         } else {
@@ -35,7 +36,7 @@ const CountDownTimer = ({minutes = 0, seconds = 60 }: ICountdown) => {
 
     return (
         <div>
-            <p>{`${time.minutes
+            <p >{`${time.minutes
                 .toString()
                 .padStart(2, '0')}:${time.seconds.toString().padStart(2, '0')}`}</p>
         </div>

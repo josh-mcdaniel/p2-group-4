@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
-import {LOG_OUT_USER} from '../../actions/actionTypes'
+import { getRandomString } from "../../actions/GameActions"
 
 import "./mainpage.css"
 
@@ -13,23 +13,23 @@ export const MainPage: React.FC<any> = () => {
 
     const navigate = useNavigate();
 
+
+
+    console.log(appState.user);
     const handleChange = (e:any) => {
         if (e.target.name === "start-button") {
+
             navigate("/game")
         } else if (e.target.name === "score-button") {
             navigate("/myScores")
         } else if (e.target.name === "leaderboard") {
             navigate("/leaderboard")
-        } else if (e.target.name === "logout") {
-
-            dispatch({ type: LOG_OUT_USER, payload: null })
+        } else {
             navigate("/")
-
-
         }
     }
     return(
-        <div>
+        <div className="black-buttons">
 
 
             <h1>Codalz</h1>

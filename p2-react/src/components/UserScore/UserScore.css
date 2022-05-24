@@ -1,0 +1,12 @@
+.scoreboard {
+    width: fit-content;
+    border-color: palegoldenrod;
+    border-style: solid;
+    margin: auto;
+    margin-bottom: 50%;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: palegoldenrod
+}

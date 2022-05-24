@@ -67,4 +67,24 @@ public class AuthController {
         }
     };
 
+    public Handler updateUserHandler = (ctx) -> {
+
+        String body = ctx.body();
+        System.out.println(body);
+        Gson gson = new Gson();
+        System.out.println(body.charAt(6));
+        User user = gson.fromJson(body, User.class);
+        char jsonid = body.charAt(6);
+        int id = Character.getNumericValue(jsonid);
+        if (user != null) {
+            System.out.println(body.charAt(6));
+            user.setUser_id(id);
+            as.updateUser(user);
+
+            ctx.status(200);
+        } else {
+            ctx.status(400);
+        }
+    };
+
 }

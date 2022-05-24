@@ -1,37 +1,44 @@
 export interface IUser {
-    id:0,
-    username:"",
-    password:"",
-    email:""
-    score: 0
+    id:number,
+    username:string,
+    password:string,
+    email:string,
+    score:number,
+    gamesPlayed: number
 }
 
 export interface ILeaderboard {
-    id:0,
-    score:0,
-    uId:0
-}
-
-export interface INewUser {
-    username:"",
-    password:"",
-    email:""
+    id:number,
+    score:number,
+    uId:number
 }
 
 export interface IWords {
-    id:0,
-    word:"",
-    mlId:0
+    id:number,
+    word:string,
+    mlId:number
 }
 
 export interface IMixedLetters {
-    id:0,
-    mixedLetters:""
+    id:number,
+    mixedLetters:string
 }
+
+export interface Iword {
+
+    word: string,
+    Notword: string,
+    isValid: boolean
+
+}
+
+
 
 export type AppState = {
     user:IUser,
     leaderboard:ILeaderboard[],
     words:IWords,
-    mixedLetters:IMixedLetters
+    mixedLetters:IMixedLetters,
+    word:Iword
+
 }

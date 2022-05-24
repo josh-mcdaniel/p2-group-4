@@ -88,19 +88,22 @@ public class UserDAO {
 		
 		HibernateUtil.closeSession();
 	}
-	
-	public void updateUser(User user) {
-		
-		Session ses = HibernateUtil.getSession();
-		
-		Transaction tran = ses.beginTransaction();
-		
-		ses.merge(user);
-		
-		tran.commit();
-		
-		HibernateUtil.closeSession();
-	}
+
+    public void updateUser(User user) {
+
+        System.out.println(user.toString());
+        Session ses = HibernateUtil.getSession();
+
+        Transaction tran = ses.beginTransaction();
+
+        Query q = ses.createQuery("UPDATE User SET score = '" + user.getScore() + "' WHERE user_id = " + user.getUser_id() );
+
+        q.executeUpdate();
+
+        tran.commit();
+
+        HibernateUtil.closeSession();
+    }
 	
 	public void deleteUser(User user) {
 		
@@ -113,18 +116,6 @@ public class UserDAO {
 		tran.commit();
 		
 		HibernateUtil.closeSession();
-	}
-
-	public User getUserbyID(int id) {
-
-		Session ses = HibernateUtil.getSession();
-		//getting the user from the DB by the ID
-		//first input represents the table and second is the ID
-		User user = ses.get(User.class, id);
-
-		HibernateUtil.closeSession();
-
-		return user;
 	}
 
 	public List<User> showAllUsers() {

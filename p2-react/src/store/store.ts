@@ -1,5 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
 import reducer from "../reducers/index";
+
 import { AppState } from "./types";
 
 const initialState:AppState = {
@@ -8,7 +9,9 @@ const initialState:AppState = {
         username:"",
         password:"",
         email:"",
-        score:0
+        score:0,
+        gamesPlayed:0
+
     },
     leaderboard: [],
     words: {
@@ -20,8 +23,14 @@ const initialState:AppState = {
         id:0,
         mixedLetters:""
 
-    }
+    },
+    word: {
 
+        word: "",
+        Notword:"",
+        isValid: false
+
+    }
 }
 
 export const store = configureStore({

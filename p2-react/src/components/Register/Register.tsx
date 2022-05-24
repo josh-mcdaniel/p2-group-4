@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from 'react-router-dom';
 import {RegisterUser, registerUser } from '../../actions/UserActions';
-//import './Register.css';
+import './Register.css';
 
 
 export const Register: React.FC<any> = () => {

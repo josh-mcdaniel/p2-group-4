@@ -44,5 +44,4 @@ public class ScoreDTO {
         return "ScoreDTO [score=" + score + ", user_id=" + user_id + "]";
     }
 
-
 }

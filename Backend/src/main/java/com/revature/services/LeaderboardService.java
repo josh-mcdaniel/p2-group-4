@@ -17,7 +17,7 @@ public class LeaderboardService {
     public Leaderboard insertScore(ScoreDTO sDTO) {
 
         //making a new user object since it is needed as a variable for Leaderboard class
-        User user = uDAO.getUserbyID(sDTO.getUser_id());
+        User user = uDAO.getUserByID(sDTO.getUser_id());
 
         //making a new leaderboard class called score and inputting the score and user variables into it
         Leaderboard score = new Leaderboard (sDTO.getScore(),
